@@ -2,15 +2,14 @@
 # Customize Options: Must Change
 #
 # Title:
-title: RADI, A data driven introduction to Swiss Politics
+title: A brief introduction to communication in Swiss Politics
 
 # Where the page will be deployed.
 # If it's https://foo.com/bar, just write "https://foo.com"
-url: "https://radi"
+url: "https://alcarinn.github.io"
 
 # If you're deployging to a subdirectory (https://foo.com/bar/)
 # Then write "/bar/". Otherwise, remove this line.
-baseurl: "/duo/"
 
 # Twitter IDs
 twitter:
@@ -32,7 +31,7 @@ defaults:
 #
 # See: https://material.io/guidelines/style/color.html
 # Use color-name-value, like pink-200 or deep-purple-100
-brand_color: "amber-400"
+brand_color: "red-700"
 
 # How article URLs are structured.
 # See: https://jekyllrb.com/docs/permalinks/
