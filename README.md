@@ -141,7 +141,7 @@ You can select the party that you wish:
 
 Globally, we observe a lot of changes over the years and three are really significant:
 <ol>
-  <li>The topic of the <b>climate</b> has largely <b>gained</b> in importance druing the two past years.</li>
+  <li>The topic of the <b>climate</b> has largely <b>gained</b> in importance during the two past years.</li>
   <li>The theme of the <b>immigration</b> has <b>lost</b> in importance over the last legislature.</li>
   <li>Between 2015 and 2017, the question of the <b>AVS</b> (Assurance-Vieillesse et Survivants) has also considerably <b>grown</b> in importance.</li>
 </ol>
