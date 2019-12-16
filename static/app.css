@@ -10,6 +10,10 @@ body {
     margin: 0
 }
 
+.boxtext {
+    margin: 0.5em !important;
+}
+
 article, aside, footer, header, nav, section {
     display: block
 }
@@ -8270,6 +8274,11 @@ img {
 
     .fixed-l {
         position: fixed
+    }
+
+    .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     .rotate-45-l {

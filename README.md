@@ -1,11 +1,15 @@
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/item-series.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 # Abstract:
 In October 2019, the <b>Swiss federal elections</b> took place and led to a huge paradigm shift. Almost all the parties started talking about climate change and the two Swiss green parties increased considerably their numbers of representatives into the parliament. This phenomenon has been called the <b><i>Green Wave</i></b>, and has been designated <a href="https://www.rts.ch/info/culture/10916700-en-suisse-romande-vague-verte-choisie-comme-expression-de-l-annee.html">expression of the year</a> in Romandy. Through this data story, we aim to better understand how the different <b>Swiss political parties</b> communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest parties of the last elections and observe if there is any <b>change in their communication</b> over the years and if so, if it has a relationship with the results of the federal elections.
 
@@ -20,17 +24,102 @@ Twitter is became a central medium of communication and is used by most of the p
 
 To familiarize with political parties of Switzerland, we propose first a small introduction about them, with the most used words in their tweets (members and parties tweets aggregated):
 
-<h2 style = "color: #FFFFFF;background-color:#006400;display: table; "> UDC</h2> The Swiss People’s party or Democratic Union of the Centre (Union Démocratique du Centre in French) is a national-conservative, <b>right-wing</b> populist party. It’s the party with the more members in the Swiss parliament. They fight for the preservation of Switzerland's political sovereignty (they are Eurosceptic) and are against mass immigration by making the asylum laws stricter. The party opposes governmental measures for environmental protection.
+<div class="container">
+    <div class="row" style="background-color: #66be29;">
+        <div class="col-lg-6 col-md-6 nopadding">
+            <img src="static/images/WordCloud_2_UDC_logo.png" onmouseover="this.src='static/images/UDC_logo.jpg';" onmouseout="this.src='static/images/WordCloud_2_UDC_logo.png';">
+        </div>
+        <div class="col-lg-6 col-md-6 nopadding" style="color: #FFFFFF;">
+            <div class="boxtext">
+                <h2> UDC </h2>
+                The Swiss People’s party (Union Démocratique du Centre in French) is a national-conservative, <b>right-wing</b> populist party. It’s the party with the more members in the Swiss parliament. They fight
+                for the preservation of Switzerland's political sovereignty (they are Eurosceptic) and are against mass immigration by making the asylum laws stricter. The party opposes governmental measures for environmental protection.
+            </div>
+        </div>
+    </div>
+</div>
 
-<h2 style = "color: #FFFFFF;background-color:#EB001F;display: table; "> PS </h2> The Social Democratic Party of Switzerland or Socialist party (Parti Socialiste Suisse in French) is a socialist, progressive and <b>Centre-left</b> party. It’s the second strongest party in Switzerland. They are in favor of strong public services, environmental policy with climate change mitigation and social equity in an open society. The party is against policies of economic liberalization such as deregulation and capitalism.
+<div class="container">
+    <div class="row"  style="background-color: #e52935;">
+        <div class="col-lg-6 col-md-6 nopadding" style="background-color: #e52935; color: #FFFFFF;">
+            <div class="boxtext">
+                <h2> PS </h2>
+                The Social Democratic Party of Switzerland or Socialist party (Parti Socialiste Suisse in French) is a socialist, progressive and <b>Centre-left</b> party. It’s the second strongest party in Switzerland. They are in favor of strong
+                public services, environmental policy with climate change mitigation and social equity in an open society. The party is against policies of economic liberalization such as deregulation and capitalism.
+            </div>
+        </div>
 
-<h2 style = "color: #FFFFFF;background-color:#009EE0;display: table; "> PLR </h2> The Liberals (Parti Libéral-radical in French) is a liberal and <b>right-wing</b> party. It’s the third largest party in the Swiss parliament. They call themselves the party of the economy and promote individual responsibility. The party believes that an open society and economic freedom are more conducive to prosperity, rather than a redistributive and regulative state.
+        <div class="col-lg-6 col-md-6 nopadding">
+            <img src="static/images/WordCloud_2_PS_logo.png" onmouseover="this.src='static/images/PS_logo.png';" onmouseout="this.src='static/images/WordCloud_2_PS_logo.png';">
+        </div>
+    </div>
+</div>
 
-<h2 style = "color: #FFFFFF;background-color:#33cc33;display: table; "> Les VERTS</h2> The green Party of Switzerland (Les Verts in French) is a environmentalist, progressive and <b>left-wing</b> party. It’s the fourth-largest party in Switzerland. Their main concerns are the protection of the environment and the fight against climate change. The party is often allied with the Socialist Party, sharing common values such as social equity and strong public services.
+<div class="container">
+    <div class="row" style="background-color: #375191; ">
+        <div class="col-lg-6 col-md-6 nopadding">
+            <img src="static/images/WordCloud_2_PLR_logo.png" onmouseover="this.src='static/images/PLR_logo.png';" onmouseout="this.src='static/images/WordCloud_2_PLR_logo.png';">
+        </div>
+        <div class="col-lg-6 col-md-6 nopadding" style="background-color: #375191; color: #FFFFFF;">
+            <div class="boxtext">
+                <h2> PLR </h2>
+                The Liberals (Parti Libéral-radical in French) is a liberal and <b>right-wing</b> party. It’s the third largest party in the Swiss parliament. They call themselves the party of the economy and promote individual responsibility. The
+                party believes that an open society and economic freedom are more conducive to prosperity, rather than a redistributive and regulative state.
+            </div>
 
-<h2 style = "color: #FFFFFF;background-color:#FFA500;display: table; "> PDC </h2> The Christian Democratic People’s party of Switzerland (Parti Démocrate-Chrétien in French) is a Christian-democratic and <b>centre-right</b> party. It’s the fifth strongest party in Switzerland. They advocate moderate social conservatism and social market economy, balance between economic liberalism and social justice. They consider themselves as the link between the left and the right wing.
+        </div>
+    </div>
+</div>
 
-<h2 style = "color: #000000;background-color:#ccff66;display: table; "> PVL </h2> The Green Liberal Party of Switzerland (Parti Vert’Libéral in French) is a <b>centre-right</b>, green-liberal party in Switzerland. It’s the youngest and the sixth strongest party in Switzerland. They seek to combine moderate economic liberalism with environmental sustainability. The party promotes economic growth, but with the preservation of the environment. They encourage sustainable energy.
+<div class="container">
+    <div class="row" style="background-color: #84b414;">
+        <div class="col-lg-6 col-md-6 nopadding" style="background-color: #84b414; color: #FFFFFF;">
+            <div class="boxtext">
+
+                <h2> Les VERTS </h2>
+                The green Party of Switzerland (Les Verts in French) is a environmentalist, progressive and <b>left-wing</b> party. It’s the fourth-largest party in Switzerland. Their main concerns are the protection of the environment and the fight
+                against climate change. The party is often allied with the Socialist Party, sharing common values such as social equity and strong public services.
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 nopadding">
+            <img src="static/images/WordCloud_2_PS_logo.png" onmouseover="this.src='static/images/VERTS_logo.png';" onmouseout="this.src='static/images/WordCloud_2_VERTS_logo.png';">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" style="background-color: #f6a12b;">
+        <div class="col-lg-6 col-md-6 nopadding">
+            <img src="static/images/WordCloud_2_PDC_logo.png" onmouseover="this.src='static/images/PDC_logo.png';" onmouseout="this.src='static/images/WordCloud_2_PDC_logo.png';">
+        </div>
+        <div class="col-lg-6 col-md-6 nopadding" style="background-color: #f6a12b; color: #FFFFFF;">
+            <div class="boxtext">
+
+                <h2> PDC </h2>
+                The Christian Democratic People’s party of Switzerland (Parti Démocrate-Chrétien in French) is a Christian-democratic and <b>centre-right</b> party. It’s the fifth strongest party in Switzerland. They advocate moderate social
+                conservatism and social market economy, balance between economic liberalism and social justice. They consider themselves as the link between the left and the right wing.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row"  style="background-color: #1a1915;">
+        <div class="col-lg-6 col-md-6 nopadding" style="background-color: #1a1915; color: #a5c840;">
+            <div class="boxtext">
+                <h2> PVL </h2>
+                The Green Liberal Party of Switzerland (Parti Vert’Libéral in French) is a <b>centre-right</b>, green-liberal party in Switzerland. It’s the youngest and the sixth strongest party in Switzerland. They seek to combine moderate economic
+                liberalism with environmental sustainability. The party promotes economic growth, but with the preservation of the environment. They encourage sustainable energy.
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 nopadding">
+            <img src="static/images/WordCloud_2_VERTS_LIB_logo.png" onmouseover="this.src='static/images/VERTS_LIB_logo.jpg';" onmouseout="this.src='static/images/WordCloud_2_VERTS_LIB_logo.png';">
+        </div>
+    </div>
+</div>
+
 
 # Topics to pick
 
