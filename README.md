@@ -7,16 +7,16 @@
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 # Abstract:
-In October 2019, the Swiss federal elections took place and led to a huge paradigm shift. Almost all the parties started talking about climate change and the two Swiss green parties increased considerably their numbers of representatives into the parliament. This phenomenon has been called the Green Wave, and has been designated expression of the year [REF]. Through this data story, we aim to better understand how the different Swiss political parties communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest parties of the last elections and observe if there is any change in their communication over the years and if so, if it had a relationship with the results of the federal elections.
+In October 2019, the <b>Swiss federal elections</b> took place and led to a huge paradigm shift. Almost all the parties started talking about <b>climate change</b> and the two Swiss green parties increased considerably their numbers of representatives into the parliament. This phenomenon has been called the <b><i>Green Wave</i></b>, and has been designated <a target="_BLANK" href="https://www.rts.ch/info/culture/10916700-en-suisse-romande-vague-verte-choisie-comme-expression-de-l-annee.html">expression of the year<a> in Romandy. Through this data story, we aim to better understand how the different Swiss political parties communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest parties of the last elections and observe if there is any change in their communication over the years and if so, if it has a relationship with the results of the federal elections.
 
 <div id="container" style="min-width: 310px; height: 400px; margin: auto"></div>
 
 
 # Introduction:
 
-Twitter is became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze [insert total number of tweets] tweets posted by the sixth largest parties (listed below) and some of their members (selected by their influence in the parliament, see [ REF = https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481]). We also use the archives of the Radio Television of Switzerland (RTS) to understand what are the principal topics discussed by the politicians over the years. Finally, we compare the changes in communications of the parties with the results of the federal elections using the associated datasets.
+Twitter is became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the sixth largest parties (listed below) and some of their members (selected by their influence in the parliament, see [ REF = https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481]). We also use the archives of the Radio Television of Switzerland (<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
 
-Swiss parties ?
+# Swiss parties you said ?
 
 To familiarize with parties of Switzerland, we propose first a small introduction about them, with the most used words in their tweets (members and parties tweets aggregated):
 
@@ -43,9 +43,7 @@ $(function () {
             },
 
             title: {
-                style: {
-                	display: 'none'
-                }
+                text: 'Results of the 2019 Swiss federal elections in Romandy'
             },
 
 
