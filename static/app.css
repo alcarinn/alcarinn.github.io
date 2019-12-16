@@ -10,6 +10,10 @@ body {
     margin: 0
 }
 
+.boxtext {
+    margin: 0.5em !important;
+}
+
 article, aside, footer, header, nav, section {
     display: block
 }
@@ -8272,6 +8276,11 @@ img {
         position: fixed
     }
 
+    .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
     .rotate-45-l {
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg)
@@ -9331,7 +9340,7 @@ img {
 }
 
 .bg-red-700 {
-    background-color: #d32f2f
+    background-color: #d32f2f;
 }
 
 .border-red-700 {
