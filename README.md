@@ -146,7 +146,7 @@ Globally, we observe a lot of changes over the years and three are really signif
   <li>Between 2015 and 2017, the question of the <b>AVS</b> (Assurance-Vieillesse et Survivants) has also considerably <b>grown</b> in importance.</li>
 </ol>
 
-These changes could be explained by the actualities e.g., votations, crisis, bombing, etc... We will focus on the first and main change, the climate change. During the past years, all the parties have started talking often about the global warming and the protection of the environment. The PLR and the PS has respectively <b>increased of approximately 25 and 40 times their communication about the climate</b> (in proportion). About 50% of the communication of the green party in 2019 is also about the climate, more than the other green (liberal) party, 36%. Thus the <i>Green Wave</i> has submerged until the twittersphere.
+These changes could be explained by the actualities e.g., votations, crisis, bombing, etc... We will focus on the first and main change, the climate change. During the past years, all the parties have started talking often about the global warming and the protection of the environment. The PLR and the PS have respectively <b>increased of approximately 25 and 40 times their communication about the climate</b> (in proportion). About 50% of the communication of the green party in 2019 is also about the climate, more than the other green (liberal) party, 36%. Thus the <i>Green Wave</i> has submerged until the twittersphere.
 
 <script type="text/javascript">
 
