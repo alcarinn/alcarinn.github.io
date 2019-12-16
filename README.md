@@ -83,7 +83,7 @@ To familiarize with political parties of Switzerland, we propose first a small i
         </div>
 
         <div class="col-lg-6 col-md-6 nopadding">
-            <img src="static/images/WordCloud_2_PS_logo.png" onmouseover="this.src='static/images/VERTS_logo.png';" onmouseout="this.src='static/images/WordCloud_2_VERTS_logo.png';">
+            <img src="static/images/WordCloud_2_VERTS_logo.png" onmouseover="this.src='static/images/VERTS_logo.png';" onmouseout="this.src='static/images/WordCloud_2_VERTS_logo.png';">
         </div>
     </div>
 </div>
