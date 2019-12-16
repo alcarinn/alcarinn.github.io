@@ -38,7 +38,7 @@ To familiarize with political parties of Switzerland, we propose first a small i
         </div>
     </div>
 </div>
-
+<br>
 <div class="container">
     <div class="row"  style="background-color: #e52935;">
         <div class="col-lg-6 col-md-6 nopadding" style="background-color: #e52935; color: #FFFFFF;">
@@ -54,7 +54,7 @@ To familiarize with political parties of Switzerland, we propose first a small i
         </div>
     </div>
 </div>
-
+<br>
 <div class="container">
     <div class="row" style="background-color: #375191; ">
         <div class="col-lg-6 col-md-6 nopadding">
@@ -70,7 +70,7 @@ To familiarize with political parties of Switzerland, we propose first a small i
         </div>
     </div>
 </div>
-
+<br>
 <div class="container">
     <div class="row" style="background-color: #84b414;">
         <div class="col-lg-6 col-md-6 nopadding" style="background-color: #84b414; color: #FFFFFF;">
@@ -87,7 +87,7 @@ To familiarize with political parties of Switzerland, we propose first a small i
         </div>
     </div>
 </div>
-
+<br>
 <div class="container">
     <div class="row" style="background-color: #f6a12b;">
         <div class="col-lg-6 col-md-6 nopadding">
@@ -104,7 +104,7 @@ To familiarize with political parties of Switzerland, we propose first a small i
 
     </div>
 </div>
-
+<br>
 <div class="container">
     <div class="row"  style="background-color: #1a1915;">
         <div class="col-lg-6 col-md-6 nopadding" style="background-color: #1a1915; color: #a5c840;">
@@ -137,7 +137,7 @@ You can select the party that you wish:
 <button id="PDC">PDC</button>
 <button id="PVL">PVL</button>
 
-<div id="topicsByYear" style="min-width: 310px; height: 400px; margin: auto"></div>
+<div id="topicsByYear" style="min-width: 310px; height: 650px; margin: auto"></div>
 
 Globally, we observe a lot of changes over the years and three are really significant:
 <ol>
