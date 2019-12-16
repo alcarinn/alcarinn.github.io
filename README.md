@@ -7,34 +7,441 @@
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 # Abstract:
-In October 2019, the <b>Swiss federal elections</b> took place and led to a huge paradigm shift. Almost all the parties started talking about climate change and the two Swiss green parties increased considerably their numbers of representatives into the parliament. This phenomenon has been called the <b><i>Green Wave</i></b>, and has been designated <a target="_BLANK" href="https://www.rts.ch/info/culture/10916700-en-suisse-romande-vague-verte-choisie-comme-expression-de-l-annee.html">expression of the year</a> in Romandy. Through this data story, we aim to better understand how the different <b>Swiss political parties</b> communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest parties of the last elections and observe if there is any <b>change in their communication</b> over the years and if so, if it has a relationship with the results of the federal elections.
+In October 2019, the <b>Swiss federal elections</b> took place and led to a huge paradigm shift. Almost all the parties started talking about climate change and the two Swiss green parties increased considerably their numbers of representatives into the parliament. This phenomenon has been called the <b><i>Green Wave</i></b>, and has been designated <a href="https://www.rts.ch/info/culture/10916700-en-suisse-romande-vague-verte-choisie-comme-expression-de-l-annee.html">expression of the year</a> in Romandy. Through this data story, we aim to better understand how the different <b>Swiss political parties</b> communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest parties of the last elections and observe if there is any <b>change in their communication</b> over the years and if so, if it has a relationship with the results of the federal elections.
 
 <div id="container" style="min-width: 310px; height: 400px; margin: auto"></div>
 
 
 # Introduction:
 
-Twitter is became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the sixth largest parties (listed below) and some of their members (selected by their <a target="_BLANK" href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland (<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
+Twitter is became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the sixth largest parties (listed below) and some of their members (selected by their <a href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland (<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
 
 # Swiss parties you said ?
 
 To familiarize with political parties of Switzerland, we propose first a small introduction about them, with the most used words in their tweets (members and parties tweets aggregated):
 
-<h2 style = "color: #FFFFFF;background-color:#006400;display: table; "> UDC</h2> The Swiss People’s party or Democratic Union of the Centre (Union Démocratique du Centre in french) is a national-conservative, right wing populist party. It’s the party with the more members in the Swiss parliament. They fight for the preservation of Switzerland's political sovereignty (they are eurosceptic) and are against mass immigration by making the asylum laws stricter. The party opposes governmental measures for environmental protection.
+<h2 style = "color: #FFFFFF;background-color:#006400;display: table; "> UDC</h2> The Swiss People’s party or Democratic Union of the Centre (Union Démocratique du Centre in French) is a national-conservative, <b>right-wing</b> populist party. It’s the party with the more members in the Swiss parliament. They fight for the preservation of Switzerland's political sovereignty (they are Eurosceptic) and are against mass immigration by making the asylum laws stricter. The party opposes governmental measures for environmental protection.
 
-<h2 style = "color: #FFFFFF;background-color:#EB001F;display: table; "> PSS </h2> The Social Democratic Party of Switzerland or Socialist party (Parti Socialiste suisse in French) is a socialist, progressive and Centre-left party. It’s the second strongest party in Switzerland. They are in favor of strong public services, environmental policy with climate change mitigation and social equity in an open society. The party is against policies of economic liberalization such as deregulation and capitalism.
+<h2 style = "color: #FFFFFF;background-color:#EB001F;display: table; "> PS </h2> The Social Democratic Party of Switzerland or Socialist party (Parti Socialiste Suisse in French) is a socialist, progressive and <b>Centre-left</b> party. It’s the second strongest party in Switzerland. They are in favor of strong public services, environmental policy with climate change mitigation and social equity in an open society. The party is against policies of economic liberalization such as deregulation and capitalism.
 
-<h2 style = "color: #FFFFFF;background-color:#009EE0;display: table; "> PLR </h2> The Liberals (Parti Libéral-radical in French) is a liberal and right-wing party. It’s the third largest party in the Swiss parliament. They call themselves the party of the economy and promote individual responsibility. The party believes that an open society and economic freedom are more conducive to prosperity, rather than a redistributive and regulative state.
+<h2 style = "color: #FFFFFF;background-color:#009EE0;display: table; "> PLR </h2> The Liberals (Parti Libéral-radical in French) is a liberal and <b>right-wing</b> party. It’s the third largest party in the Swiss parliament. They call themselves the party of the economy and promote individual responsibility. The party believes that an open society and economic freedom are more conducive to prosperity, rather than a redistributive and regulative state.
 
-<h2 style = "color: #FFFFFF;background-color:#33cc33;display: table; "> Les VERTS</h2> The green Party of Switzerland (Les Verts in French) is a environmentalist, progressive and left-wing party. It’s the fourth-largest party in Switzerland. Their main concerns are the protection of the environment and the fight against climate change. The party is often allied with the Socialist Party, sharing common values such as social equity and strong public services.
+<h2 style = "color: #FFFFFF;background-color:#33cc33;display: table; "> Les VERTS</h2> The green Party of Switzerland (Les Verts in French) is a environmentalist, progressive and <b>left-wing</b> party. It’s the fourth-largest party in Switzerland. Their main concerns are the protection of the environment and the fight against climate change. The party is often allied with the Socialist Party, sharing common values such as social equity and strong public services.
 
-<h2 style = "color: #FFFFFF;background-color:#FFA500;display: table; "> PDC </h2> The Christian Democratic People’s party of Switzerland (Parti Démocrate-Chrétien in French) is a Christian-democratic and centre-right party. It’s the fifth strongest party in Switzerland. They advocate moderate social conservatism and social market economy, balance between economic liberalism and social justice. They consider themselves as the link between the left and the right wing.
+<h2 style = "color: #FFFFFF;background-color:#FFA500;display: table; "> PDC </h2> The Christian Democratic People’s party of Switzerland (Parti Démocrate-Chrétien in French) is a Christian-democratic and <b>centre-right</b> party. It’s the fifth strongest party in Switzerland. They advocate moderate social conservatism and social market economy, balance between economic liberalism and social justice. They consider themselves as the link between the left and the right wing.
 
-<h2 style = "color: #000000;background-color:#ccff66;display: table; "> PVL </h2> The Green Liberal Party of Switzerland (Parti vert’libéral in French) is a centre-right,  green-liberal party in Switzerland. It’s the youngest and the sixth strongest party in Switzerland. They seek to combine moderate economic liberalism with environmental sustainability. The party promotes economic growth, but with the preservation of the environment. They encourage sustainable energy.
+<h2 style = "color: #000000;background-color:#ccff66;display: table; "> PVL </h2> The Green Liberal Party of Switzerland (Parti Vert’Libéral in French) is a <b>centre-right</b>, green-liberal party in Switzerland. It’s the youngest and the sixth strongest party in Switzerland. They seek to combine moderate economic liberalism with environmental sustainability. The party promotes economic growth, but with the preservation of the environment. They encourage sustainable energy.
 
+# Topics to pick
 
+<button id="UDC">UDC</button>
+<button id="PS">PS</button>
+<button id="PLR">PLR</button>
+<button id="VERTS">VERTS</button>
+<button id="PDC">PDC</button>
+<button id="PVL">PVL</button>
+
+<div id="topicsByYear" style="min-width: 310px; height: 400px; margin: auto"></div>
 
 <script type="text/javascript">
+
+var chart = Highcharts.chart('topicsByYear', {
+  chart: {
+    type: 'area'
+},
+title: {
+    text: 'Evolution of the topics over the years for the UDC in their tweets'
+},
+xAxis: {
+    categories: ['2015', '2016', '2017', '2018', '2019'],
+    tickmarkPlacement: 'on',
+    text: 'Years',
+},
+yAxis: {
+    labels: {
+        format: '{value}%'
+    },
+    title: {
+        enabled: false
+    }
+},
+tooltip: {
+    pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} occurences)<br/>',
+    split: true
+},
+plotOptions: {
+    area: {
+        stacking: 'percent',
+        lineColor: '#ffffff',
+        lineWidth: 1,
+        marker: {
+            lineWidth: 1,
+            lineColor: '#ffffff'
+        },
+        accessibility: {
+            pointDescriptionFormatter: function (point) {
+                function round(x) {
+                    return Math.round(x * 100) / 100;
+                }
+                return (point.index + 1) + ', ' + point.category + ', ' +
+                    point.y + ' millions, ' + round(point.percentage) + '%, ' +
+                    point.series.name;
+            }
+        }
+    }
+},
+series: [{
+    name: 'Climate',
+    data: [2, 0, 1, 12, 16]
+}, {
+    name: 'Immigration',
+    data: [41, 33, 8, 36, 48]
+}, {
+    name: 'Safety',
+    data: [10, 7, 2, 1, 30]
+}, {
+    name: 'Liberty',
+    data: [5, 6, 6, 14, 78]
+}, {
+    name: 'Egality',
+    data: [0, 0, 1, 0, 4]
+}, {
+    name: 'Economy',
+    data: [5, 5, 1, 12, 31]
+}, {
+    name: 'Work',
+    data: [4, 8, 4, 8, 35]
+}, {
+    name: 'Women',
+    data: [3, 0, 0, 2, 17]
+}, {
+    name: 'Digital',
+    data: [0, 0, 0, 0, 0]
+}, {
+    name: 'Family',
+    data: [4, 3, 0, 6, 6]
+}, {
+    name: 'AVS',
+    data: [2, 1, 5, 1, 14]
+}, {
+    name: 'Health',
+    data: [0, 0, 0, 0, 10]
+}, {
+    name: 'Europe',
+    data: [6, 2, 4, 22, 95]
+}, {
+    name: 'Army',
+    data: [3, 2, 0, 0, 2]
+}]
+
+});
+
+$('#UDC').click(function () {
+    chart.update({
+      title: {
+          text: 'Evolution of the topics over the years for the UDC in their tweets'
+      },
+      series: [{
+          name: 'Climate',
+          data: [2, 0, 1, 12, 16]
+      }, {
+          name: 'Immigration',
+          data: [41, 33, 8, 36, 48]
+      }, {
+          name: 'Safety',
+          data: [10, 7, 2, 1, 30]
+      }, {
+          name: 'Liberty',
+          data: [5, 6, 6, 14, 78]
+      }, {
+          name: 'Egality',
+          data: [0, 0, 1, 0, 4]
+      }, {
+          name: 'Economy',
+          data: [5, 5, 1, 12, 31]
+      }, {
+          name: 'Work',
+          data: [4, 8, 4, 8, 35]
+      }, {
+          name: 'Women',
+          data: [3, 0, 0, 2, 17]
+      }, {
+          name: 'Digital',
+          data: [0, 0, 0, 0, 0]
+      }, {
+          name: 'Family',
+          data: [4, 3, 0, 6, 6]
+      }, {
+          name: 'AVS',
+          data: [2, 1, 5, 1, 14]
+      }, {
+          name: 'Health',
+          data: [0, 0, 0, 0, 10]
+      }, {
+          name: 'Europe',
+          data: [6, 2, 4, 22, 95]
+      }, {
+          name: 'Army',
+          data: [3, 2, 0, 0, 2]
+      }]
+    });
+});
+
+$('#PS').click(function () {
+    chart.update({
+      title: {
+          text: 'Evolution of the topics over the years for the PS in their tweets'
+      },
+      series: [{
+          name: 'Climate',
+          data: [3, 8, 39, 96, 353]
+      }, {
+          name: 'Immigration',
+          data: [73, 88, 71, 174, 44]
+      }, {
+          name: 'Safety',
+          data: [30, 27, 59, 86, 87]
+      }, {
+          name: 'Liberty',
+          data: [31, 30, 45, 57, 36]
+      }, {
+          name: 'Egality',
+          data: [55, 70, 77, 198, 180]
+      }, {
+          name: 'Economy',
+          data: [29, 35, 64, 113, 81]
+      }, {
+          name: 'Work',
+          data: [120, 164, 218, 373, 316]
+      }, {
+          name: 'Women',
+          data: [36, 63, 147, 184, 216]
+      }, {
+          name: 'Digital',
+          data: [6, 2, 22, 37, 41]
+      }, {
+          name: 'Family',
+          data: [85, 62, 69, 92, 112]
+      }, {
+          name: 'AVS',
+          data: [22, 62, 180, 56, 71]
+      }, {
+          name: 'Health',
+          data: [29, 26, 63, 68, 146]
+      }, {
+          name: 'Europe',
+          data: [92, 94, 99, 182, 107]
+      }, {
+          name: 'Army',
+          data: [7, 18, 24, 27, 16]
+      }]
+
+    });
+});
+
+$('#PLR').click(function () {
+    chart.update({
+      title: {
+          text: 'Evolution of the topics over the years for the PLR in their tweets'
+      },
+      series: [{
+          name: 'Climate',
+          data: [4, 1, 10, 30, 176]
+      }, {
+          name: 'Immigration',
+          data: [55, 55, 23, 33, 26]
+      }, {
+          name: 'Safety',
+          data: [23, 37, 21, 24, 20]
+      }, {
+          name: 'Liberty',
+          data: [66, 53, 44, 37, 38]
+      }, {
+          name: 'Egality',
+          data: [6, 10, 9, 31, 13]
+      }, {
+          name: 'Economy',
+          data: [33, 47, 49, 71, 89]
+      }, {
+          name: 'Work',
+          data: [52, 50, 58, 124, 96]
+      }, {
+          name: 'Women',
+          data: [25, 8, 27, 11, 35]
+      }, {
+          name: 'Digital',
+          data: [16, 33, 41, 73, 18]
+      }, {
+          name: 'Family',
+          data: [27, 45, 9, 10, 32]
+      }, {
+          name: 'AVS',
+          data: [10, 46, 34, 6, 15]
+      }, {
+          name: 'Health',
+          data: [0, 7, 6, 55, 43]
+      }, {
+          name: 'Europe',
+          data: [31, 24, 14, 43, 67]
+      }, {
+          name: 'Army',
+          data: [9, 1, 6, 4, 4]
+      }]
+    });
+});
+
+$('#VERTS').click(function () {
+    chart.update({
+      title: {
+          text: 'Evolution of the topics over the years for the VERTS in their tweets'
+      },
+      series: [{
+          name: 'Climate',
+          data: [75, 11, 57, 153, 1365]
+      }, {
+          name: 'Immigration',
+          data: [44, 16, 9, 9, 28]
+      }, {
+          name: 'Safety',
+          data: [11, 6, 19, 9, 30]
+      }, {
+          name: 'Liberty',
+          data: [4, 3, 4, 8, 47]
+      }, {
+          name: 'Egality',
+          data: [22, 5, 3, 38, 148]
+      }, {
+          name: 'Economy',
+          data: [47, 49, 16, 18, 203]
+      }, {
+          name: 'Work',
+          data: [24, 7, 23, 31, 134]
+      }, {
+          name: 'Women',
+          data: [4, 1, 5, 20, 156]
+      }, {
+          name: 'Digital',
+          data: [4, 1, 19, 2, 24]
+      }, {
+          name: 'Family',
+          data: [22, 7, 6, 13, 56]
+      }, {
+          name: 'AVS',
+          data: [8, 5, 6, 4, 2]
+      }, {
+          name: 'Health',
+          data: [15, 2, 5, 6, 58]
+      }, {
+          name: 'Europe',
+          data: [12, 8, 7, 9, 115]
+      }, {
+          name: 'Army',
+          data: [10, 3, 7, 6, 11]
+      }]
+    });
+});
+
+$('#PDC').click(function () {
+    chart.update({
+      title: {
+          text: 'Evolution of the topics over the years for the PDC in their tweets'
+      },
+      series: [{
+          name: 'Climate',
+          data: [8, 4, 6, 7, 47]
+      }, {
+          name: 'Immigration',
+          data: [36, 27, 23, 17, 24]
+      }, {
+          name: 'Safety',
+          data: [13, 24, 11, 18, 41]
+      }, {
+          name: 'Liberty',
+          data: [19, 6, 9, 24, 12]
+      }, {
+          name: 'Egality',
+          data: [10, 12, 4, 19, 19]
+      }, {
+          name: 'Economy',
+          data: [16, 12, 28, 48, 64]
+      }, {
+          name: 'Work',
+          data: [23, 23, 23, 63, 61]
+      }, {
+          name: 'Women',
+          data: [2, 4, 25, 14, 37]
+      }, {
+          name: 'Digital',
+          data: [2, 1, 4, 17, 19]
+      }, {
+          name: 'Family',
+          data: [60, 40, 23, 45, 41]
+      }, {
+          name: 'AVS',
+          data: [3, 20, 37, 14, 73]
+      }, {
+          name: 'Health',
+          data: [6, 7, 30, 116, 114]
+      }, {
+          name: 'Europe',
+          data: [13, 11, 15, 42, 51]
+      }, {
+          name: 'Army',
+          data: [26, 10, 31, 2, 7]
+      }]
+    });
+});
+
+$('#PVL').click(function () {
+    chart.update({
+      title: {
+          text: 'Evolution of the topics over the years for the PVL in their tweets'
+      },
+      series: [{
+          name: 'Climate',
+          data: [8, 1, 5, 35, 164]
+      }, {
+          name: 'Immigration',
+          data: [8, 4, 0, 6, 6]
+      }, {
+          name: 'Safety',
+          data: [17, 4, 2, 5, 14]
+      }, {
+          name: 'Liberty',
+          data: [13, 1, 1, 2, 25]
+      }, {
+          name: 'Egality',
+          data: [1, 1, 2, 6, 22]
+      }, {
+          name: 'Economy',
+          data: [29, 9, 6, 12, 45]
+      }, {
+          name: 'Work',
+          data: [9, 5, 5, 15, 35]
+      }, {
+          name: 'Women',
+          data: [2, 4, 1, 10, 36]
+      }, {
+          name: 'Digital',
+          data: [0, 0, 1, 3, 3]
+      }, {
+          name: 'Family',
+          data: [17, 8, 3, 4, 29]
+      }, {
+          name: 'AVS',
+          data: [0, 3, 1, 5, 4]
+      }, {
+          name: 'Health',
+          data: [2, 1, 0, 1, 11]
+      }, {
+          name: 'Europe',
+          data: [3, 2, 4, 24, 64]
+      }, {
+          name: 'Army',
+          data: [2, 3, 0, 1, 0]
+      }]
+    });
+});
 
 $(function () {
         $('#container').highcharts({
@@ -77,7 +484,6 @@ $(function () {
 
         });
     });
-
 
 </script>
 ## Get Started
