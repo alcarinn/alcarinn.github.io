@@ -34,6 +34,13 @@ To familiarize with political parties of Switzerland, we propose first a small i
 
 # Topics to pick
 
+# What ? The party is evolving !
+
+We are interested in how the communication has evolved over the last legislature (2015-2019). Specifically, what are the main topics of each year for the different parties. The following chart represents the evolution of these different topics <b>over the years</b>.
+
+
+You can select the party that you wish:
+<button id="All">All</button>
 <button id="UDC">UDC</button>
 <button id="PS">PS</button>
 <button id="PLR">PLR</button>
@@ -43,6 +50,15 @@ To familiarize with political parties of Switzerland, we propose first a small i
 
 <div id="topicsByYear" style="min-width: 310px; height: 400px; margin: auto"></div>
 
+Globally, we observe a lot of changes over the years and three are really significant:
+<ol>
+  <li>The topic of the <b>climate</b> has largely <b>gained</b> in importance druing the two past years.</li>
+  <li>The theme of the <b>immigration</b> has <b>lost</b> in importance over the last legislature.</li>
+  <li>Between 2015 and 2017, the question of the <b>AVS</b> (Assurance-Vieillesse et Survivants) has also considerably <b>grown</b> in importance.</li>
+</ol>
+
+These changes could be explained by the actualities e.g., votations, crisis, bombing, etc... We will focus on the first and main change, the climate change. During the past years, all the parties have started talking often about the global warming and the protection of the environment. The PLR and the PS has respectively <b>increased of approximately 25 and 40 times their communication about the climate</b> (in proportion). About 50% of the communication of the green party in 2019 is also about the climate, more than the other green (liberal) party, 36%. Thus the <i>Green Wave</i> has submerged until the twittersphere.
+
 <script type="text/javascript">
 
 var chart = Highcharts.chart('topicsByYear', {
@@ -50,7 +66,7 @@ var chart = Highcharts.chart('topicsByYear', {
     type: 'area'
 },
 title: {
-    text: 'Evolution of the topics over the years for the UDC in their tweets'
+    text: 'Evolution of the topics over the years for all the parties in their tweets'
 },
 xAxis: {
     categories: ['2015', '2016', '2017', '2018', '2019'],
@@ -92,48 +108,99 @@ plotOptions: {
 },
 series: [{
     name: 'Climate',
-    data: [2, 0, 1, 12, 16]
+    data: [100, 25, 118, 333, 2121]
 }, {
     name: 'Immigration',
-    data: [41, 33, 8, 36, 48]
+    data: [257, 223, 134, 275, 176]
 }, {
     name: 'Safety',
-    data: [10, 7, 2, 1, 30]
+    data: [104, 105, 114, 143, 222]
 }, {
     name: 'Liberty',
-    data: [5, 6, 6, 14, 78]
+    data: [138, 99, 109, 142, 236]
 }, {
     name: 'Egality',
-    data: [0, 0, 1, 0, 4]
+    data: [94, 98, 96, 292, 386]
 }, {
     name: 'Economy',
-    data: [5, 5, 1, 12, 31]
+    data: [159, 157, 164, 274, 513]
 }, {
     name: 'Work',
-    data: [4, 8, 4, 8, 35]
+    data: [232, 257, 331, 614, 677]
 }, {
     name: 'Women',
-    data: [3, 0, 0, 2, 17]
+    data: [72, 80, 205, 241, 497]
 }, {
     name: 'Digital',
-    data: [0, 0, 0, 0, 0]
+    data: [28, 37, 87, 132, 105]
 }, {
     name: 'Family',
-    data: [4, 3, 0, 6, 6]
+    data: [215, 165, 110, 170, 276]
 }, {
     name: 'AVS',
-    data: [2, 1, 5, 1, 14]
+    data: [45, 137, 263, 86, 179]
 }, {
     name: 'Health',
-    data: [0, 0, 0, 0, 10]
+    data: [51, 43, 104, 246, 382]
 }, {
     name: 'Europe',
-    data: [6, 2, 4, 22, 95]
+    data: [157, 141, 143, 322, 499]
 }, {
     name: 'Army',
-    data: [3, 2, 0, 0, 2]
+    data: [57, 37, 68, 40, 40]
 }]
 
+});
+
+$('#All').click(function () {
+    chart.update({
+      title: {
+          text: 'Evolution of the topics over the years for all the parties in their tweets'
+      },
+      series: [{
+          name: 'Climate',
+          data: [100, 25, 118, 333, 2121]
+      }, {
+          name: 'Immigration',
+          data: [257, 223, 134, 275, 176]
+      }, {
+          name: 'Safety',
+          data: [104, 105, 114, 143, 222]
+      }, {
+          name: 'Liberty',
+          data: [138, 99, 109, 142, 236]
+      }, {
+          name: 'Egality',
+          data: [94, 98, 96, 292, 386]
+      }, {
+          name: 'Economy',
+          data: [159, 157, 164, 274, 513]
+      }, {
+          name: 'Work',
+          data: [232, 257, 331, 614, 677]
+      }, {
+          name: 'Women',
+          data: [72, 80, 205, 241, 497]
+      }, {
+          name: 'Digital',
+          data: [28, 37, 87, 132, 105]
+      }, {
+          name: 'Family',
+          data: [215, 165, 110, 170, 276]
+      }, {
+          name: 'AVS',
+          data: [45, 137, 263, 86, 179]
+      }, {
+          name: 'Health',
+          data: [51, 43, 104, 246, 382]
+      }, {
+          name: 'Europe',
+          data: [157, 141, 143, 322, 499]
+      }, {
+          name: 'Army',
+          data: [57, 37, 68, 40, 40]
+      }]
+    });
 });
 
 $('#UDC').click(function () {
@@ -486,6 +553,7 @@ $(function () {
     });
 
 </script>
+
 ## Get Started
 
 
