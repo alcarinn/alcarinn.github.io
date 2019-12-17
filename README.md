@@ -118,7 +118,7 @@ To familiarize with political parties of Switzerland, we propose first a small i
 The parties presented above are the sixth largest parties and represent <b>90% of the Swiss population</b>.
 
 ## The first rule of Swiss Politics is: you do not talk about PVL
-After this little introduction about Swiss politics, let's see <b>how much the different parties talk about the others parties</b>.
+After this little introduction about Swiss politics, let's see <b>how much the different parties talk about the others parties</b> on twitter.
 
 
 You can select the party that you wish:
