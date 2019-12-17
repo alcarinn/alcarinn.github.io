@@ -7,6 +7,7 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -148,458 +149,613 @@ Globally, we observe a lot of changes over the years and three are really signif
 
 These changes could be explained by the actualities e.g., votations, crisis, bombing, etc... We will focus on the first and main change, the climate change. During the past years, all the parties have started talking often about the global warming and the protection of the environment. The PLR and the PS have respectively <b>increased of approximately 25 and 40 times their communication about the climate</b> (in proportion). About 50% of the communication of the green party in 2019 is also about the climate, more than the other green (liberal) party, 36%. Thus the <i>Green Wave</i> has submerged until the twittersphere.
 
+You can select the party that you wish:
+<button id="UDC-1">UDC</button>
+<button id="PS-1">PS</button>
+<button id="PLR-1">PLR</button>
+<button id="VERTS-1">VERTS</button>
+<button id="PDC-1">PDC</button>
+<button id="PVL-1">PVL</button>
+
+<figure class="highcharts-figure">
+    <div id="partyGossip" style="min-width: 310px; height: 650px; margin: auto"></div>
+</figure>
+
+
 <script type="text/javascript">
+    var color_dict = {
+        "UDC": "#66be29",
+        'PS': '#e52935',
+        'PLR': '#375191',
+        'VERTS': '#84b414',
+        'PDC': '#f6a12b',
+        'PVL': '#a5c840'
+    };
 
-var chart = Highcharts.chart('topicsByYear', {
-  chart: {
-    type: 'area'
-},
-title: {
-    text: 'Evolution of the topics over the years for all the parties in their tweets'
-},
-xAxis: {
-    categories: ['2015', '2016', '2017', '2018', '2019'],
-    tickmarkPlacement: 'on',
-    text: 'Years',
-},
-yAxis: {
-    labels: {
-        format: '{value}%'
-    },
-    title: {
-        enabled: false
-    }
-},
-tooltip: {
-    pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} occurences)<br/>',
-    split: true
-},
-plotOptions: {
-    area: {
-        stacking: 'percent',
-        lineColor: '#ffffff',
-        lineWidth: 1,
-        marker: {
-            lineWidth: 1,
-            lineColor: '#ffffff'
+    var topicsByYear = Highcharts.chart('topicsByYear', {
+        chart: {
+            type: 'area'
         },
-        accessibility: {
-            pointDescriptionFormatter: function (point) {
-                function round(x) {
-                    return Math.round(x * 100) / 100;
-                }
-                return (point.index + 1) + ', ' + point.category + ', ' +
-                    point.y + ' millions, ' + round(point.percentage) + '%, ' +
-                    point.series.name;
+        title: {
+            text: 'Evolution of the topics over the years for all the parties in their tweets'
+        },
+        xAxis: {
+            categories: ['2015', '2016', '2017', '2018', '2019'],
+            tickmarkPlacement: 'on',
+            text: 'Years',
+        },
+        yAxis: {
+            labels: {
+                format: '{value}%'
+            },
+            title: {
+                enabled: false
             }
+        },
+        tooltip: {
+            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} occurences)<br/>',
+            split: true
+        },
+        plotOptions: {
+            area: {
+                stacking: 'percent',
+                lineColor: '#ffffff',
+                lineWidth: 1,
+                marker: {
+                    lineWidth: 1,
+                    lineColor: '#ffffff'
+                },
+                accessibility: {
+                    pointDescriptionFormatter: function(point) {
+                        function round(x) {
+                            return Math.round(x * 100) / 100;
+                        }
+                        return (point.index + 1) + ', ' + point.category + ', ' +
+                            point.y + ' millions, ' + round(point.percentage) + '%, ' +
+                            point.series.name;
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Climate',
+            data: [100, 25, 118, 333, 2121]
+        }, {
+            name: 'Immigration',
+            data: [257, 223, 134, 275, 176]
+        }, {
+            name: 'Safety',
+            data: [104, 105, 114, 143, 222]
+        }, {
+            name: 'Liberty',
+            data: [138, 99, 109, 142, 236]
+        }, {
+            name: 'Egality',
+            data: [94, 98, 96, 292, 386]
+        }, {
+            name: 'Economy',
+            data: [159, 157, 164, 274, 513]
+        }, {
+            name: 'Work',
+            data: [232, 257, 331, 614, 677]
+        }, {
+            name: 'Women',
+            data: [72, 80, 205, 241, 497]
+        }, {
+            name: 'Digital',
+            data: [28, 37, 87, 132, 105]
+        }, {
+            name: 'Family',
+            data: [215, 165, 110, 170, 276]
+        }, {
+            name: 'AVS',
+            data: [45, 137, 263, 86, 179]
+        }, {
+            name: 'Health',
+            data: [51, 43, 104, 246, 382]
+        }, {
+            name: 'Europe',
+            data: [157, 141, 143, 322, 499]
+        }, {
+            name: 'Army',
+            data: [57, 37, 68, 40, 40]
+        }]
+
+    });
+
+    var gossip = Highcharts.chart('partyGossip', {
+
+        chart: {
+            polar: true
+        },
+
+        xAxis: {
+            categories: ['PLR', 'PS', 'VERTS', 'PVL', 'PDC']
+        },
+
+
+        series: [{
+            type: 'area',
+            color: color_dict['UDC'],
+            data: [19, 34.883720930232556, 30.232558139534884, 0.0, 15.116279069767442]
+        }],
+
+        title: {
+            text: 'Which parties does UDC talk more about ?'
+        },
+
+        yAxis: {
+            min: 0
         }
-    }
-},
-series: [{
-    name: 'Climate',
-    data: [100, 25, 118, 333, 2121]
-}, {
-    name: 'Immigration',
-    data: [257, 223, 134, 275, 176]
-}, {
-    name: 'Safety',
-    data: [104, 105, 114, 143, 222]
-}, {
-    name: 'Liberty',
-    data: [138, 99, 109, 142, 236]
-}, {
-    name: 'Egality',
-    data: [94, 98, 96, 292, 386]
-}, {
-    name: 'Economy',
-    data: [159, 157, 164, 274, 513]
-}, {
-    name: 'Work',
-    data: [232, 257, 331, 614, 677]
-}, {
-    name: 'Women',
-    data: [72, 80, 205, 241, 497]
-}, {
-    name: 'Digital',
-    data: [28, 37, 87, 132, 105]
-}, {
-    name: 'Family',
-    data: [215, 165, 110, 170, 276]
-}, {
-    name: 'AVS',
-    data: [45, 137, 263, 86, 179]
-}, {
-    name: 'Health',
-    data: [51, 43, 104, 246, 382]
-}, {
-    name: 'Europe',
-    data: [157, 141, 143, 322, 499]
-}, {
-    name: 'Army',
-    data: [57, 37, 68, 40, 40]
-}]
-
-});
-
-$('#All').click(function () {
-    chart.update({
-      title: {
-          text: 'Evolution of the topics over the years for all the parties in their tweets'
-      },
-      series: [{
-          name: 'Climate',
-          data: [100, 25, 118, 333, 2121]
-      }, {
-          name: 'Immigration',
-          data: [257, 223, 134, 275, 176]
-      }, {
-          name: 'Safety',
-          data: [104, 105, 114, 143, 222]
-      }, {
-          name: 'Liberty',
-          data: [138, 99, 109, 142, 236]
-      }, {
-          name: 'Egality',
-          data: [94, 98, 96, 292, 386]
-      }, {
-          name: 'Economy',
-          data: [159, 157, 164, 274, 513]
-      }, {
-          name: 'Work',
-          data: [232, 257, 331, 614, 677]
-      }, {
-          name: 'Women',
-          data: [72, 80, 205, 241, 497]
-      }, {
-          name: 'Digital',
-          data: [28, 37, 87, 132, 105]
-      }, {
-          name: 'Family',
-          data: [215, 165, 110, 170, 276]
-      }, {
-          name: 'AVS',
-          data: [45, 137, 263, 86, 179]
-      }, {
-          name: 'Health',
-          data: [51, 43, 104, 246, 382]
-      }, {
-          name: 'Europe',
-          data: [157, 141, 143, 322, 499]
-      }, {
-          name: 'Army',
-          data: [57, 37, 68, 40, 40]
-      }]
     });
-});
 
-$('#UDC').click(function () {
-    chart.update({
-      title: {
-          text: 'Evolution of the topics over the years for the UDC in their tweets'
-      },
-      series: [{
-          name: 'Climate',
-          data: [2, 0, 1, 12, 16]
-      }, {
-          name: 'Immigration',
-          data: [41, 33, 8, 36, 48]
-      }, {
-          name: 'Safety',
-          data: [10, 7, 2, 1, 30]
-      }, {
-          name: 'Liberty',
-          data: [5, 6, 6, 14, 78]
-      }, {
-          name: 'Egality',
-          data: [0, 0, 1, 0, 4]
-      }, {
-          name: 'Economy',
-          data: [5, 5, 1, 12, 31]
-      }, {
-          name: 'Work',
-          data: [4, 8, 4, 8, 35]
-      }, {
-          name: 'Women',
-          data: [3, 0, 0, 2, 17]
-      }, {
-          name: 'Digital',
-          data: [0, 0, 0, 0, 0]
-      }, {
-          name: 'Family',
-          data: [4, 3, 0, 6, 6]
-      }, {
-          name: 'AVS',
-          data: [2, 1, 5, 1, 14]
-      }, {
-          name: 'Health',
-          data: [0, 0, 0, 0, 10]
-      }, {
-          name: 'Europe',
-          data: [6, 2, 4, 22, 95]
-      }, {
-          name: 'Army',
-          data: [3, 2, 0, 0, 2]
-      }]
+    $('#All').click(function() {
+        topicsByYear.update({
+            title: {
+                text: 'Evolution of the topics over the years for all the parties in their tweets'
+            },
+            series: [{
+                name: 'Climate',
+                data: [100, 25, 118, 333, 2121]
+            }, {
+                name: 'Immigration',
+                data: [257, 223, 134, 275, 176]
+            }, {
+                name: 'Safety',
+                data: [104, 105, 114, 143, 222]
+            }, {
+                name: 'Liberty',
+                data: [138, 99, 109, 142, 236]
+            }, {
+                name: 'Egality',
+                data: [94, 98, 96, 292, 386]
+            }, {
+                name: 'Economy',
+                data: [159, 157, 164, 274, 513]
+            }, {
+                name: 'Work',
+                data: [232, 257, 331, 614, 677]
+            }, {
+                name: 'Women',
+                data: [72, 80, 205, 241, 497]
+            }, {
+                name: 'Digital',
+                data: [28, 37, 87, 132, 105]
+            }, {
+                name: 'Family',
+                data: [215, 165, 110, 170, 276]
+            }, {
+                name: 'AVS',
+                data: [45, 137, 263, 86, 179]
+            }, {
+                name: 'Health',
+                data: [51, 43, 104, 246, 382]
+            }, {
+                name: 'Europe',
+                data: [157, 141, 143, 322, 499]
+            }, {
+                name: 'Army',
+                data: [57, 37, 68, 40, 40]
+            }]
+        });
     });
-});
 
-$('#PS').click(function () {
-    chart.update({
-      title: {
-          text: 'Evolution of the topics over the years for the PS in their tweets'
-      },
-      series: [{
-          name: 'Climate',
-          data: [3, 8, 39, 96, 353]
-      }, {
-          name: 'Immigration',
-          data: [73, 88, 71, 174, 44]
-      }, {
-          name: 'Safety',
-          data: [30, 27, 59, 86, 87]
-      }, {
-          name: 'Liberty',
-          data: [31, 30, 45, 57, 36]
-      }, {
-          name: 'Egality',
-          data: [55, 70, 77, 198, 180]
-      }, {
-          name: 'Economy',
-          data: [29, 35, 64, 113, 81]
-      }, {
-          name: 'Work',
-          data: [120, 164, 218, 373, 316]
-      }, {
-          name: 'Women',
-          data: [36, 63, 147, 184, 216]
-      }, {
-          name: 'Digital',
-          data: [6, 2, 22, 37, 41]
-      }, {
-          name: 'Family',
-          data: [85, 62, 69, 92, 112]
-      }, {
-          name: 'AVS',
-          data: [22, 62, 180, 56, 71]
-      }, {
-          name: 'Health',
-          data: [29, 26, 63, 68, 146]
-      }, {
-          name: 'Europe',
-          data: [92, 94, 99, 182, 107]
-      }, {
-          name: 'Army',
-          data: [7, 18, 24, 27, 16]
-      }]
-
+    $('#UDC').click(function() {
+        topicsByYear.update({
+            title: {
+                text: 'Evolution of the topics over the years for the UDC in their tweets'
+            },
+            series: [{
+                name: 'Climate',
+                data: [2, 0, 1, 12, 16]
+            }, {
+                name: 'Immigration',
+                data: [41, 33, 8, 36, 48]
+            }, {
+                name: 'Safety',
+                data: [10, 7, 2, 1, 30]
+            }, {
+                name: 'Liberty',
+                data: [5, 6, 6, 14, 78]
+            }, {
+                name: 'Egality',
+                data: [0, 0, 1, 0, 4]
+            }, {
+                name: 'Economy',
+                data: [5, 5, 1, 12, 31]
+            }, {
+                name: 'Work',
+                data: [4, 8, 4, 8, 35]
+            }, {
+                name: 'Women',
+                data: [3, 0, 0, 2, 17]
+            }, {
+                name: 'Digital',
+                data: [0, 0, 0, 0, 0]
+            }, {
+                name: 'Family',
+                data: [4, 3, 0, 6, 6]
+            }, {
+                name: 'AVS',
+                data: [2, 1, 5, 1, 14]
+            }, {
+                name: 'Health',
+                data: [0, 0, 0, 0, 10]
+            }, {
+                name: 'Europe',
+                data: [6, 2, 4, 22, 95]
+            }, {
+                name: 'Army',
+                data: [3, 2, 0, 0, 2]
+            }]
+        });
     });
-});
 
-$('#PLR').click(function () {
-    chart.update({
-      title: {
-          text: 'Evolution of the topics over the years for the PLR in their tweets'
-      },
-      series: [{
-          name: 'Climate',
-          data: [4, 1, 10, 30, 176]
-      }, {
-          name: 'Immigration',
-          data: [55, 55, 23, 33, 26]
-      }, {
-          name: 'Safety',
-          data: [23, 37, 21, 24, 20]
-      }, {
-          name: 'Liberty',
-          data: [66, 53, 44, 37, 38]
-      }, {
-          name: 'Egality',
-          data: [6, 10, 9, 31, 13]
-      }, {
-          name: 'Economy',
-          data: [33, 47, 49, 71, 89]
-      }, {
-          name: 'Work',
-          data: [52, 50, 58, 124, 96]
-      }, {
-          name: 'Women',
-          data: [25, 8, 27, 11, 35]
-      }, {
-          name: 'Digital',
-          data: [16, 33, 41, 73, 18]
-      }, {
-          name: 'Family',
-          data: [27, 45, 9, 10, 32]
-      }, {
-          name: 'AVS',
-          data: [10, 46, 34, 6, 15]
-      }, {
-          name: 'Health',
-          data: [0, 7, 6, 55, 43]
-      }, {
-          name: 'Europe',
-          data: [31, 24, 14, 43, 67]
-      }, {
-          name: 'Army',
-          data: [9, 1, 6, 4, 4]
-      }]
+    $('#PS').click(function() {
+        topicsByYear.update({
+            title: {
+                text: 'Evolution of the topics over the years for the PS in their tweets'
+            },
+            series: [{
+                name: 'Climate',
+                data: [3, 8, 39, 96, 353]
+            }, {
+                name: 'Immigration',
+                data: [73, 88, 71, 174, 44]
+            }, {
+                name: 'Safety',
+                data: [30, 27, 59, 86, 87]
+            }, {
+                name: 'Liberty',
+                data: [31, 30, 45, 57, 36]
+            }, {
+                name: 'Egality',
+                data: [55, 70, 77, 198, 180]
+            }, {
+                name: 'Economy',
+                data: [29, 35, 64, 113, 81]
+            }, {
+                name: 'Work',
+                data: [120, 164, 218, 373, 316]
+            }, {
+                name: 'Women',
+                data: [36, 63, 147, 184, 216]
+            }, {
+                name: 'Digital',
+                data: [6, 2, 22, 37, 41]
+            }, {
+                name: 'Family',
+                data: [85, 62, 69, 92, 112]
+            }, {
+                name: 'AVS',
+                data: [22, 62, 180, 56, 71]
+            }, {
+                name: 'Health',
+                data: [29, 26, 63, 68, 146]
+            }, {
+                name: 'Europe',
+                data: [92, 94, 99, 182, 107]
+            }, {
+                name: 'Army',
+                data: [7, 18, 24, 27, 16]
+            }]
+
+        });
     });
-});
 
-$('#VERTS').click(function () {
-    chart.update({
-      title: {
-          text: 'Evolution of the topics over the years for the VERTS in their tweets'
-      },
-      series: [{
-          name: 'Climate',
-          data: [75, 11, 57, 153, 1365]
-      }, {
-          name: 'Immigration',
-          data: [44, 16, 9, 9, 28]
-      }, {
-          name: 'Safety',
-          data: [11, 6, 19, 9, 30]
-      }, {
-          name: 'Liberty',
-          data: [4, 3, 4, 8, 47]
-      }, {
-          name: 'Egality',
-          data: [22, 5, 3, 38, 148]
-      }, {
-          name: 'Economy',
-          data: [47, 49, 16, 18, 203]
-      }, {
-          name: 'Work',
-          data: [24, 7, 23, 31, 134]
-      }, {
-          name: 'Women',
-          data: [4, 1, 5, 20, 156]
-      }, {
-          name: 'Digital',
-          data: [4, 1, 19, 2, 24]
-      }, {
-          name: 'Family',
-          data: [22, 7, 6, 13, 56]
-      }, {
-          name: 'AVS',
-          data: [8, 5, 6, 4, 2]
-      }, {
-          name: 'Health',
-          data: [15, 2, 5, 6, 58]
-      }, {
-          name: 'Europe',
-          data: [12, 8, 7, 9, 115]
-      }, {
-          name: 'Army',
-          data: [10, 3, 7, 6, 11]
-      }]
+    $('#PLR').click(function() {
+        topicsByYear.update({
+            title: {
+                text: 'Evolution of the topics over the years for the PLR in their tweets'
+            },
+            series: [{
+                name: 'Climate',
+                data: [4, 1, 10, 30, 176]
+            }, {
+                name: 'Immigration',
+                data: [55, 55, 23, 33, 26]
+            }, {
+                name: 'Safety',
+                data: [23, 37, 21, 24, 20]
+            }, {
+                name: 'Liberty',
+                data: [66, 53, 44, 37, 38]
+            }, {
+                name: 'Egality',
+                data: [6, 10, 9, 31, 13]
+            }, {
+                name: 'Economy',
+                data: [33, 47, 49, 71, 89]
+            }, {
+                name: 'Work',
+                data: [52, 50, 58, 124, 96]
+            }, {
+                name: 'Women',
+                data: [25, 8, 27, 11, 35]
+            }, {
+                name: 'Digital',
+                data: [16, 33, 41, 73, 18]
+            }, {
+                name: 'Family',
+                data: [27, 45, 9, 10, 32]
+            }, {
+                name: 'AVS',
+                data: [10, 46, 34, 6, 15]
+            }, {
+                name: 'Health',
+                data: [0, 7, 6, 55, 43]
+            }, {
+                name: 'Europe',
+                data: [31, 24, 14, 43, 67]
+            }, {
+                name: 'Army',
+                data: [9, 1, 6, 4, 4]
+            }]
+        });
     });
-});
 
-$('#PDC').click(function () {
-    chart.update({
-      title: {
-          text: 'Evolution of the topics over the years for the PDC in their tweets'
-      },
-      series: [{
-          name: 'Climate',
-          data: [8, 4, 6, 7, 47]
-      }, {
-          name: 'Immigration',
-          data: [36, 27, 23, 17, 24]
-      }, {
-          name: 'Safety',
-          data: [13, 24, 11, 18, 41]
-      }, {
-          name: 'Liberty',
-          data: [19, 6, 9, 24, 12]
-      }, {
-          name: 'Egality',
-          data: [10, 12, 4, 19, 19]
-      }, {
-          name: 'Economy',
-          data: [16, 12, 28, 48, 64]
-      }, {
-          name: 'Work',
-          data: [23, 23, 23, 63, 61]
-      }, {
-          name: 'Women',
-          data: [2, 4, 25, 14, 37]
-      }, {
-          name: 'Digital',
-          data: [2, 1, 4, 17, 19]
-      }, {
-          name: 'Family',
-          data: [60, 40, 23, 45, 41]
-      }, {
-          name: 'AVS',
-          data: [3, 20, 37, 14, 73]
-      }, {
-          name: 'Health',
-          data: [6, 7, 30, 116, 114]
-      }, {
-          name: 'Europe',
-          data: [13, 11, 15, 42, 51]
-      }, {
-          name: 'Army',
-          data: [26, 10, 31, 2, 7]
-      }]
+    $('#VERTS').click(function() {
+        topicsByYear.update({
+            title: {
+                text: 'Evolution of the topics over the years for the VERTS in their tweets'
+            },
+            series: [{
+                name: 'Climate',
+                data: [75, 11, 57, 153, 1365]
+            }, {
+                name: 'Immigration',
+                data: [44, 16, 9, 9, 28]
+            }, {
+                name: 'Safety',
+                data: [11, 6, 19, 9, 30]
+            }, {
+                name: 'Liberty',
+                data: [4, 3, 4, 8, 47]
+            }, {
+                name: 'Egality',
+                data: [22, 5, 3, 38, 148]
+            }, {
+                name: 'Economy',
+                data: [47, 49, 16, 18, 203]
+            }, {
+                name: 'Work',
+                data: [24, 7, 23, 31, 134]
+            }, {
+                name: 'Women',
+                data: [4, 1, 5, 20, 156]
+            }, {
+                name: 'Digital',
+                data: [4, 1, 19, 2, 24]
+            }, {
+                name: 'Family',
+                data: [22, 7, 6, 13, 56]
+            }, {
+                name: 'AVS',
+                data: [8, 5, 6, 4, 2]
+            }, {
+                name: 'Health',
+                data: [15, 2, 5, 6, 58]
+            }, {
+                name: 'Europe',
+                data: [12, 8, 7, 9, 115]
+            }, {
+                name: 'Army',
+                data: [10, 3, 7, 6, 11]
+            }]
+        });
     });
-});
 
-$('#PVL').click(function () {
-    chart.update({
-      title: {
-          text: 'Evolution of the topics over the years for the PVL in their tweets'
-      },
-      series: [{
-          name: 'Climate',
-          data: [8, 1, 5, 35, 164]
-      }, {
-          name: 'Immigration',
-          data: [8, 4, 0, 6, 6]
-      }, {
-          name: 'Safety',
-          data: [17, 4, 2, 5, 14]
-      }, {
-          name: 'Liberty',
-          data: [13, 1, 1, 2, 25]
-      }, {
-          name: 'Egality',
-          data: [1, 1, 2, 6, 22]
-      }, {
-          name: 'Economy',
-          data: [29, 9, 6, 12, 45]
-      }, {
-          name: 'Work',
-          data: [9, 5, 5, 15, 35]
-      }, {
-          name: 'Women',
-          data: [2, 4, 1, 10, 36]
-      }, {
-          name: 'Digital',
-          data: [0, 0, 1, 3, 3]
-      }, {
-          name: 'Family',
-          data: [17, 8, 3, 4, 29]
-      }, {
-          name: 'AVS',
-          data: [0, 3, 1, 5, 4]
-      }, {
-          name: 'Health',
-          data: [2, 1, 0, 1, 11]
-      }, {
-          name: 'Europe',
-          data: [3, 2, 4, 24, 64]
-      }, {
-          name: 'Army',
-          data: [2, 3, 0, 1, 0]
-      }]
+    $('#PDC').click(function() {
+        topicsByYear.update({
+            title: {
+                text: 'Evolution of the topics over the years for the PDC in their tweets'
+            },
+            series: [{
+                name: 'Climate',
+                data: [8, 4, 6, 7, 47]
+            }, {
+                name: 'Immigration',
+                data: [36, 27, 23, 17, 24]
+            }, {
+                name: 'Safety',
+                data: [13, 24, 11, 18, 41]
+            }, {
+                name: 'Liberty',
+                data: [19, 6, 9, 24, 12]
+            }, {
+                name: 'Egality',
+                data: [10, 12, 4, 19, 19]
+            }, {
+                name: 'Economy',
+                data: [16, 12, 28, 48, 64]
+            }, {
+                name: 'Work',
+                data: [23, 23, 23, 63, 61]
+            }, {
+                name: 'Women',
+                data: [2, 4, 25, 14, 37]
+            }, {
+                name: 'Digital',
+                data: [2, 1, 4, 17, 19]
+            }, {
+                name: 'Family',
+                data: [60, 40, 23, 45, 41]
+            }, {
+                name: 'AVS',
+                data: [3, 20, 37, 14, 73]
+            }, {
+                name: 'Health',
+                data: [6, 7, 30, 116, 114]
+            }, {
+                name: 'Europe',
+                data: [13, 11, 15, 42, 51]
+            }, {
+                name: 'Army',
+                data: [26, 10, 31, 2, 7]
+            }]
+        });
     });
-});
 
-$(function () {
+    $('#PVL').click(function() {
+        topicsByYear.update({
+            title: {
+                text: 'Evolution of the topics over the years for the PVL in their tweets'
+            },
+            series: [{
+                name: 'Climate',
+                data: [8, 1, 5, 35, 164]
+            }, {
+                name: 'Immigration',
+                data: [8, 4, 0, 6, 6]
+            }, {
+                name: 'Safety',
+                data: [17, 4, 2, 5, 14]
+            }, {
+                name: 'Liberty',
+                data: [13, 1, 1, 2, 25]
+            }, {
+                name: 'Egality',
+                data: [1, 1, 2, 6, 22]
+            }, {
+                name: 'Economy',
+                data: [29, 9, 6, 12, 45]
+            }, {
+                name: 'Work',
+                data: [9, 5, 5, 15, 35]
+            }, {
+                name: 'Women',
+                data: [2, 4, 1, 10, 36]
+            }, {
+                name: 'Digital',
+                data: [0, 0, 1, 3, 3]
+            }, {
+                name: 'Family',
+                data: [17, 8, 3, 4, 29]
+            }, {
+                name: 'AVS',
+                data: [0, 3, 1, 5, 4]
+            }, {
+                name: 'Health',
+                data: [2, 1, 0, 1, 11]
+            }, {
+                name: 'Europe',
+                data: [3, 2, 4, 24, 64]
+            }, {
+                name: 'Army',
+                data: [2, 3, 0, 1, 0]
+            }]
+        });
+    });
+    $('#UDC-1').click(function() {
+        gossip.update({
+            xAxis: {
+                categories: ['PLR', 'PS', 'VERTS', 'PVL', 'PDC']
+            },
+
+            series: [{
+                type: 'area',
+                color: color_dict['UDC'],
+                data: [19, 34.883720930232556, 30.232558139534884, 0.0, 15.116279069767442]
+            }],
+
+            title: {
+                text: 'Which parties does UDC talk more about ?'
+            }
+        });
+    });
+
+    $('#PS-1').click(function() {
+        gossip.update({
+            xAxis: {
+                categories: ['UDC', 'PLR', 'VERTS', 'PVL', 'PDC']
+            },
+
+            series: [{
+                type: 'area',
+                color: color_dict['PS'],
+                data: [84.18079096045197, 4.80225988700565, 7.344632768361582, 0.0, 3.672316384180791]
+            }],
+
+            title: {
+                text: 'Which parties does PS talk more about ?'
+            }
+        });
+    });
+
+    $('#PLR-1').click(function() {
+        gossip.update({
+            xAxis: {
+                categories: ['UDC', 'PS', 'VERTS', 'PVL', 'PDC']
+            },
+
+            series: [{
+                type: 'area',
+                color: color_dict['PLR'],
+                data: [21.556122448979593, 48.08673469387755, 8.290816326530612, 0.3826530612244898, 21.683673469387756]
+            }],
+
+            title: {
+                text: 'Which parties does PLR talk more about ?'
+            }
+        });
+    });
+
+    $('#VERTS-1').click(function() {
+        gossip.update({
+            xAxis: {
+                categories: ['UDC', 'PS', 'PLR', 'PVL', 'PDC']
+            },
+
+            series: [{
+                type: 'area',
+                color: color_dict['VERTS'],
+                data: [20.74074074074074, 43.20987654320987, 20.74074074074074, 0.7407407407407407, 14.567901234567902]
+            }],
+
+            title: {
+                text: 'Which parties does les VERTS talk more about ?'
+            }
+        });
+    });
+
+    $('#PDC-1').click(function() {
+        gossip.update({
+            xAxis: {
+                categories: ['UDC', 'PS', 'PLR', 'VERTS', 'PVL']
+            },
+
+            series: [{
+                type: 'area',
+                color: color_dict['PDC'],
+                data: [31.185567010309278, 34.27835051546392, 21.649484536082475, 12.371134020618557, 0.5154639175257731]
+            }],
+
+            title: {
+                text: 'Which parties does PDC talk more about ?'
+            }
+        });
+    });
+
+    $('#PVL-1').click(function() {
+        gossip.update({
+            xAxis: {
+                categories: ['UDC', 'PS', 'PLR', 'VERTS', 'PDC']
+            },
+
+            series: [{
+                type: 'area',
+                color: color_dict['PVL'],
+                data: [28.32764505119454, 19.112627986348123, 15.017064846416382, 21.843003412969285, 15.699658703071673]
+            }],
+
+            title: {
+                text: 'Which parties does PVL talk more about ?'
+            }
+        });
+    });
+
+
+    $(function() {
         $('#container').highcharts({
             chart: {
                 type: 'item'
@@ -618,12 +774,12 @@ $(function () {
                 name: 'Representatives',
                 keys: ['name', 'y', 'color', 'label'],
                 data: [
-                    ['Parti Socialiste', 16, '#EB001F', 'PS'],
-                    ['Les Verts', 14, '#33cc33', 'VERTS'],
-                    ['Parti démocrate-chrétien', 7, 'orange', 'PDC'],
-                    ['Parti vert-libéraux', 6, '#ccff66', 'PVL'],
-                    ['Parti libéral-radical', 12, '#009EE0', 'PLR'],
-                    ['Union démocratique du centre', 15, 'darkgreen', 'UDC'],
+                    ['Parti Socialiste', 16, color_dict['PS'], 'PS'],
+                    ['Les Verts', 14, color_dict['VERTS'], 'VERTS'],
+                    ['Parti démocrate-chrétien', 7, color_dict['PDC'], 'PDC'],
+                    ['Parti vert-libéraux', 6, color_dict['PVL'], 'PVL'],
+                    ['Parti libéral-radical', 12, color_dict['PLR'], 'PLR'],
+                    ['Union démocratique du centre', 15, color_dict['UDC'], 'UDC'],
                     ['Others', 6, '#000000', 'Others']
                 ],
                 dataLabels: {
@@ -640,7 +796,6 @@ $(function () {
 
         });
     });
-
 </script>
 
 ## Get Started
