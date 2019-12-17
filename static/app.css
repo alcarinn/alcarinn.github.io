@@ -10,6 +10,11 @@ body {
     margin: 0
 }
 
+.centered {
+    display: flex;
+    align-items: center;
+}
+
 .boxtext {
     margin: 0.5em !important;
 }

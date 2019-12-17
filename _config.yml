@@ -13,9 +13,9 @@ url: "https://alcarinn.github.io"
 
 # Twitter IDs
 twitter:
-  username: "chibicode"
+  username: "alcarinn"
 author:
-  twitter: "chibicode"
+  twitter: "alcarinn"
 
 # Set default og:image
 # From Unsplash: https://unsplash.com/photos/1_CMoFsPfso
@@ -24,7 +24,7 @@ defaults:
     scope:
       path: ""
     values:
-      image: "static/images/og.jpg"
+      image: "static/images/WordCloud_2_swiss.png"
 
 # ----------------------------------------------------------------------------
 # Customize Options: Optional

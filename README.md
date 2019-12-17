@@ -1,5 +1,3 @@
-
-
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -13,14 +11,20 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 # Abstract:
-In October 2019, the <b>Swiss federal elections</b> took place and led to a huge paradigm shift. Almost all the parties started talking about climate change and the two Swiss green parties increased considerably their numbers of representatives into the parliament. This phenomenon has been called the <b><i>Green Wave</i></b>, and has been designated <a href="https://www.rts.ch/info/culture/10916700-en-suisse-romande-vague-verte-choisie-comme-expression-de-l-annee.html">expression of the year</a> in Romandy. Through this data story, we aim to better understand how the different <b>Swiss political parties</b> communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest parties of the last elections and observe if there is any <b>change in their communication</b> over the years and if so, if it has a relationship with the results of the federal elections.
+In October 2019, the <b>Swiss federal elections</b> took place and led to a huge paradigm shift. Almost all the parties started talking about climate change and the two Swiss green parties increased considerably their numbers of representatives into
+the parliament. This phenomenon has been called the <b><i>Green Wave</i></b>, and has been designated <a href="https://www.rts.ch/info/culture/10916700-en-suisse-romande-vague-verte-choisie-comme-expression-de-l-annee.html">expression of the year</a>
+in Romandy. Through this data story, we aim to better understand how the different <b>Swiss political parties</b> communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest
+parties of the last elections and observe if there is any <b>change in their communication</b> over the years and if so, if it has a relationship with the results of the federal elections.
 
 <div id="container" style="min-width: 310px; height: 400px; margin: auto"></div>
 
 
 # Introduction:
 
-Twitter is became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the sixth largest parties (listed below) and some of their members (selected by their <a href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland (<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
+Twitter is became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the
+essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the sixth largest parties (listed below)
+and some of their members (selected by their <a href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland
+(<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
 
 # Swiss parties you said ?
 
@@ -42,7 +46,7 @@ To familiarize with political parties of Switzerland, we propose first a small i
 </div>
 <br>
 <div class="container">
-    <div class="row"  style="background-color: #e52935;">
+    <div class="row" style="background-color: #e52935;">
         <div class="col-lg-6 col-md-6 nopadding" style="background-color: #e52935; color: #FFFFFF;">
             <div class="boxtext">
                 <h2> PS </h2>
@@ -108,7 +112,7 @@ To familiarize with political parties of Switzerland, we propose first a small i
 </div>
 <br>
 <div class="container">
-    <div class="row"  style="background-color: #1a1915;">
+    <div class="row" style="background-color: #1a1915;">
         <div class="col-lg-6 col-md-6 nopadding" style="background-color: #1a1915; color: #a5c840;">
             <div class="boxtext">
                 <h2> PVL </h2>
@@ -127,9 +131,63 @@ To familiarize with political parties of Switzerland, we propose first a small i
 
 <div id="heatmap"></div>
 
+#The usual suspects
+Without any surprise, the top tweets from each party are well representative of their ideology.
+The followers of the page will tend to retweet or follow posts which confirm the best their beliefs.
+Confirming our topic analysis, we can see that UDC talks about immigration, PS talks about refusing
+payments from private corporations, PLR about individualism and work, les VERTS about climate, PDC
+about healthcare and PVL about climate, entrepreneurship and youth.
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6" style="background-color: #66be29; color: #FFFFFF;">
+            <div class="centered">
+                <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
+                    <a href="https://twitter.com/UDCch/status/924285981657878528"></a>
+                </blockquote>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6" style="background-color: #e52935; color: #FFFFFF;">
+            <div class="centered">
+                <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
+                    <a href="https://twitter.com/PSSuisse/status/805395166790094849"></a>
+                </blockquote>   
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-6 col-md-6" style="background-color: #375191; color: #FFFFFF;">
+            <div class="centered">
+                <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
+                    <a href="https://twitter.com/PLR_Suisse/status/1136942992865071105"></a>
+                </blockquote>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 " style="background-color: #84b414; color: #FFFFFF;">
+            <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
+                <a href="https://twitter.com/LesVertsSuisses/status/1179754578612572163"></a>
+            </blockquote>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-6 col-md-6" style="background-color: #f6a12b; color: #FFFFFF;">
+            <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
+                <a href="https://twitter.com/CVP_PDC/status/901765603471626240"></a>
+            </blockquote>
+        </div>
+        <div class="col-lg-6 col-md-6 " style="background-color: #1a1915; color: #FFFFFF;">
+            <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
+                <a href="https://twitter.com/vertliberaux/status/1108658013081088000"></a>
+            </blockquote>
+        </div>
+    </div>
+</div>
+
 # What ? The party is evolving !
 
-We are interested in how the communication has evolved over the last legislature (2015-2019). Specifically, what are the main topics of each year for the different parties. The following chart represents the evolution of these different topics <b>over the years</b>.
+We are interested in how the communication has evolved over the last legislature (2015-2019). Specifically, what are the main topics of each year for the different parties. The following chart represents the evolution of these different topics
+<b>over the years</b>.
 
 
 You can select the party that you wish:
@@ -145,12 +203,14 @@ You can select the party that you wish:
 
 Globally, we observe a lot of changes over the years and three are really significant:
 <ol>
-  <li>The topic of the <b>climate</b> has largely <b>gained</b> in importance during the two past years.</li>
-  <li>The theme of the <b>immigration</b> has <b>lost</b> in importance over the last legislature.</li>
-  <li>Between 2015 and 2017, the question of the <b>AVS</b> (Assurance-Vieillesse et Survivants) has also considerably <b>grown</b> in importance.</li>
+    <li>The topic of the <b>climate</b> has largely <b>gained</b> in importance during the two past years.</li>
+    <li>The theme of the <b>immigration</b> has <b>lost</b> in importance over the last legislature.</li>
+    <li>Between 2015 and 2017, the question of the <b>AVS</b> (Assurance-Vieillesse et Survivants) has also considerably <b>grown</b> in importance.</li>
 </ol>
 
-These changes could be explained by the actualities e.g., votations, crisis, bombing, etc... We will focus on the first and main change, the climate change. During the past years, all the parties have started talking often about the global warming and the protection of the environment. The PLR and the PS have respectively <b>increased of approximately 25 and 40 times their communication about the climate</b> (in proportion). About 50% of the communication of the green party in 2019 is also about the climate, more than the other green (liberal) party, 36%. Thus the <i>Green Wave</i> has submerged until the twittersphere.
+These changes could be explained by the actualities e.g., votations, crisis, bombing, etc... We will focus on the first and main change, the climate change. During the past years, all the parties have started talking often about the global warming
+and the protection of the environment. The PLR and the PS have respectively <b>increased of approximately 25 and 40 times their communication about the climate</b> (in proportion). About 50% of the communication of the green party in 2019 is also
+about the climate, more than the other green (liberal) party, 36%. Thus the <i>Green Wave</i> has submerged until the twittersphere.
 
 You can select the party that you wish:
 <button id="UDC-1">UDC</button>
@@ -160,10 +220,36 @@ You can select the party that you wish:
 <button id="PDC-1">PDC</button>
 <button id="PVL-1">PVL</button>
 
+# The first rule of Swiss Politics ... you don't talk about PVL
+On the mainlines we see that parties tend to talk more about more powerful parties and parties from which they are ideologically distant.
+Some parties have aliances, so mentions of eachother can be high, as it is the case for les VERTS with PS.
+PS being the main opposition to UDC's majority, they adopted a strategy of mentioning (criticizing) UDC, they talk about them nearly 6 times more than other parties combined.
 <figure class="highcharts-figure">
-    <div id="partyGossip" style="min-width: 310px; height: 650px; margin: auto"></div>
+    <div id="partyGossip"></div>
 </figure>
-
+Although one strategy in communication catches the eye: don't mention the Green Liberal party. 
+<footer style="background-color: #d32f2f">
+    <div class="container">
+        <div class="row ">
+            <div class="col text-white text-center">
+                <p>
+                    <br>
+                    Deniz Ira, Isabelle Pumford, Arthur Vignon, Robin Zbinden • 2019
+                    <br>
+                    <a href="https://github.com/ArthurVignon/ADA_project_RADI"><b>GitHub Repository</b></a>
+                    •
+                    <a href="https://github.com/alcarinn/alcarinn.github.io"> <b> Website Repository </b> </a>
+                    <br>
+                    <b>Theme </b>
+                    <a href="https://github.com/chibicode/duo">duo</a>
+                    <b>by </b>
+                    <a href="https://github.com/chibicode">Shu Uesugi</a>
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script type="text/javascript">
     var color_dict = {
@@ -172,117 +258,151 @@ You can select the party that you wish:
         'PLR': '#375191',
         'VERTS': '#84b414',
         'PDC': '#f6a12b',
-        'PVL': '#a5c840'
+        'PVL': '#a5c840',
+        'PVL_secondary': '#1a1915'
     };
 
     function getPointCategoryName(point, dimension) {
-    var series = point.series,
-        isY = dimension === 'y',
-        axis = series[isY ? 'yAxis' : 'xAxis'];
-    return axis.categories[point[isY ? 'y' : 'x']];
-}
+        var series = point.series,
+            isY = dimension === 'y',
+            axis = series[isY ? 'yAxis' : 'xAxis'];
+        return axis.categories[point[isY ? 'y' : 'x']];
+    }
 
-Highcharts.chart('heatmap', {
+    Highcharts.chart('heatmap', {
 
-    chart: {
-        type: 'heatmap',
-        marginTop: 40,
-        marginBottom: 80,
-        plotBorderWidth: 1
-    },
-
-
-    title: {
-        text: 'Cosine similarity between the parties (x10,000)'
-    },
-
-    xAxis: {
-        categories: ['VERTS', 'PS', 'PDC', 'PVL', 'PLR', 'UDC']
-    },
-
-    yAxis: {
-        categories: ['VERTS', 'PS', 'PDC', 'PVL', 'PLR', 'UDC'],
-        title: null,
-        reversed: true
-    },
-
-    accessibility: {
-        point: {
-            descriptionFormatter: function (point) {
-                var ix = point.index + 1,
-                    xName = getPointCategoryName(point, 'x'),
-                    yName = getPointCategoryName(point, 'y'),
-                    val = point.value;
-                return ix + '. ' + xName + ' sales ' + yName + ', ' + val + '.';
-            }
-        }
-    },
-
-    colorAxis: {
-        min: 0,
-        minColor: '#FFFFFF',
-        maxColor: Highcharts.getOptions().colors[0]
-    },
-
-    legend: {
-        align: 'right',
-        layout: 'vertical',
-        margin: 0,
-        verticalAlign: 'top',
-        y: 25,
-        symbolHeight: 280
-    },
-
-    tooltip: {
-        formatter: function () {
-            return '<b>' + getPointCategoryName(this.point, 'x') + '</b> has <b>' +
-                this.point.value + '</b><br> cosine similarity<br> value with <b>' + getPointCategoryName(this.point, 'y') + '</b>';
-        }
-    },
-
-    credits: {
-        text: 'Note: 0 means most similar and high values mean most different',
-        position: {
-            align: 'center',
-            y: -30
+        chart: {
+            type: 'heatmap',
+            marginTop: 40,
+            marginBottom: 80,
+            plotBorderWidth: 1
         },
-        style: {
-            fontSize: '10pt'
-        }
-    },
 
-    series: [{
-        name: 'Sales per employee',
-        borderWidth: 1,
-        data: [[ 0, 0, 0.00],[ 0, 1, 0.86],[ 0, 2, 3.03],[ 0, 3, 0.38],[ 0, 4, 1.56],[ 0, 5, 4.05],[ 1, 0, 0.86],[ 1, 1, 0.00],
-        [ 1, 2, 0.86],[ 1, 3, 0.12],[ 1, 4, 0.11],[ 1, 5, 1.55],[ 2, 0, 3.03],[ 2, 1, 0.86],[ 2, 2, 0.00],[ 2, 3, 1.55],
-        [ 2, 4, 0.62],[ 2, 5, 2.06],[ 3, 0, 0.38],[ 3, 1, 0.12],[ 3, 2, 1.55],[ 3, 3, 0.00],[ 3, 4, 0.41],[ 3, 5, 2.10],
-        [ 4, 0, 1.56],[ 4, 1, 0.11],[ 4, 2, 0.62],[ 4, 3, 0.41],[ 4, 4, 0.00],[ 4, 5, 0.96],[ 5, 0, 4.05],[ 5, 1, 1.55],
-        [ 5, 2, 2.06],[ 5, 3, 2.10],[ 5, 4, 0.96],[ 5, 5, 0.00]],
-        dataLabels: {
-            enabled: true,
-            color: '#000000'
-        }
-    }],
 
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
+        title: {
+            text: 'Cosine similarity between the parties (x10,000)'
+        },
+
+        xAxis: {
+            categories: ['VERTS', 'PS', 'PDC', 'PVL', 'PLR', 'UDC']
+        },
+
+        yAxis: {
+            categories: ['VERTS', 'PS', 'PDC', 'PVL', 'PLR', 'UDC'],
+            title: null,
+            reversed: true
+        },
+
+        accessibility: {
+            point: {
+                descriptionFormatter: function(point) {
+                    var ix = point.index + 1,
+                        xName = getPointCategoryName(point, 'x'),
+                        yName = getPointCategoryName(point, 'y'),
+                        val = point.value;
+                    return ix + '. ' + xName + ' sales ' + yName + ', ' + val + '.';
+                }
+            }
+        },
+
+        colorAxis: {
+            min: 0,
+            minColor: '#FFFFFF',
+            maxColor: Highcharts.getOptions().colors[0]
+        },
+
+        legend: {
+            align: 'right',
+            layout: 'vertical',
+            margin: 0,
+            verticalAlign: 'top',
+            y: 25,
+            symbolHeight: 280
+        },
+
+        tooltip: {
+            formatter: function() {
+                return '<b>' + getPointCategoryName(this.point, 'x') + '</b> has <b>' +
+                    this.point.value + '</b><br> cosine similarity<br> value with <b>' + getPointCategoryName(this.point, 'y') + '</b>';
+            }
+        },
+
+        credits: {
+            text: 'Note: 0 means most similar and high values mean most different',
+            position: {
+                align: 'center',
+                y: -30
             },
-            chartOptions: {
-                yAxis: {
-                    labels: {
-                        formatter: function () {
-                            return this.value.charAt(0);
+            style: {
+                fontSize: '10pt'
+            }
+        },
+
+        series: [{
+            name: 'Sales per employee',
+            borderWidth: 1,
+            data: [
+                [0, 0, 0.00],
+                [0, 1, 0.86],
+                [0, 2, 3.03],
+                [0, 3, 0.38],
+                [0, 4, 1.56],
+                [0, 5, 4.05],
+                [1, 0, 0.86],
+                [1, 1, 0.00],
+                [1, 2, 0.86],
+                [1, 3, 0.12],
+                [1, 4, 0.11],
+                [1, 5, 1.55],
+                [2, 0, 3.03],
+                [2, 1, 0.86],
+                [2, 2, 0.00],
+                [2, 3, 1.55],
+                [2, 4, 0.62],
+                [2, 5, 2.06],
+                [3, 0, 0.38],
+                [3, 1, 0.12],
+                [3, 2, 1.55],
+                [3, 3, 0.00],
+                [3, 4, 0.41],
+                [3, 5, 2.10],
+                [4, 0, 1.56],
+                [4, 1, 0.11],
+                [4, 2, 0.62],
+                [4, 3, 0.41],
+                [4, 4, 0.00],
+                [4, 5, 0.96],
+                [5, 0, 4.05],
+                [5, 1, 1.55],
+                [5, 2, 2.06],
+                [5, 3, 2.10],
+                [5, 4, 0.96],
+                [5, 5, 0.00]
+            ],
+            dataLabels: {
+                enabled: true,
+                color: '#000000'
+            }
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    yAxis: {
+                        labels: {
+                            formatter: function() {
+                                return this.value.charAt(0);
+                            }
                         }
                     }
                 }
-            }
-        }]
-    }
+            }]
+        }
 
-});
+    });
 
     var topicsByYear = Highcharts.chart('topicsByYear', {
         chart: {
@@ -910,15 +1030,46 @@ Highcharts.chart('heatmap', {
     });
 </script>
 
-## Get Started
 
+<a href="https://github.com/ArthurVignon/ADA_project_RADI" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor"
+            style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path
+            d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+            fill="currentColor" class="octo-body"></path>
+    </svg></a>
+<style>
+    .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
 
-## Next Steps
+    @keyframes octocat-wave {
 
-See: [Customize Duo](https://chibicode.github.io/duo/posts/customize).
+        0%,
+        100% {
+            transform: rotate(0)
+        }
 
-## Like or Retweet Appreciated :)
+        20%,
+        60% {
+            transform: rotate(-25deg)
+        }
 
-<blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Just published: Duo, A Simple Jekyll Theme.  <a href="https://t.co/G2kffR9e4U">https://t.co/G2kffR9e4U</a> <a href="https://twitter.com/jekyllrb?ref_src=twsrc%5Etfw">@jekyllrb</a></p>&mdash; Shu Uesugi (@chibicode) <a href="https://twitter.com/chibicode/status/923156795824128000?ref_src=twsrc%5Etfw">October 25, 2017</a></blockquote>
+        40%,
+        80% {
+            transform: rotate(10deg)
+        }
+    }
 
-<!-- <a href="https://github.com/chibicode/duo" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style><script async defer src="https://buttons.github.io/buttons.js"></script> -->
+    @media (max-width:500px) {
+        .github-corner:hover .octo-arm {
+            animation: none
+        }
+
+        .github-corner .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+    }
+</style>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
