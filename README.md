@@ -8,6 +8,7 @@
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 <script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/heatmap.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -124,6 +125,8 @@ To familiarize with political parties of Switzerland, we propose first a small i
 
 # Topics to pick
 
+<div id="heatmap"></div>
+
 # What ? The party is evolving !
 
 We are interested in how the communication has evolved over the last legislature (2015-2019). Specifically, what are the main topics of each year for the different parties. The following chart represents the evolution of these different topics <b>over the years</b>.
@@ -171,6 +174,115 @@ You can select the party that you wish:
         'PDC': '#f6a12b',
         'PVL': '#a5c840'
     };
+
+    function getPointCategoryName(point, dimension) {
+    var series = point.series,
+        isY = dimension === 'y',
+        axis = series[isY ? 'yAxis' : 'xAxis'];
+    return axis.categories[point[isY ? 'y' : 'x']];
+}
+
+Highcharts.chart('heatmap', {
+
+    chart: {
+        type: 'heatmap',
+        marginTop: 40,
+        marginBottom: 80,
+        plotBorderWidth: 1
+    },
+
+
+    title: {
+        text: 'Cosine similarity between the parties (x10,000)'
+    },
+
+    xAxis: {
+        categories: ['VERTS', 'PS', 'PDC', 'PVL', 'PLR', 'UDC']
+    },
+
+    yAxis: {
+        categories: ['VERTS', 'PS', 'PDC', 'PVL', 'PLR', 'UDC'],
+        title: null,
+        reversed: true
+    },
+
+    accessibility: {
+        point: {
+            descriptionFormatter: function (point) {
+                var ix = point.index + 1,
+                    xName = getPointCategoryName(point, 'x'),
+                    yName = getPointCategoryName(point, 'y'),
+                    val = point.value;
+                return ix + '. ' + xName + ' sales ' + yName + ', ' + val + '.';
+            }
+        }
+    },
+
+    colorAxis: {
+        min: 0,
+        minColor: '#FFFFFF',
+        maxColor: Highcharts.getOptions().colors[0]
+    },
+
+    legend: {
+        align: 'right',
+        layout: 'vertical',
+        margin: 0,
+        verticalAlign: 'top',
+        y: 25,
+        symbolHeight: 280
+    },
+
+    tooltip: {
+        formatter: function () {
+            return '<b>' + getPointCategoryName(this.point, 'x') + '</b> has <b>' +
+                this.point.value + '</b><br> cosine similarity<br> value with <b>' + getPointCategoryName(this.point, 'y') + '</b>';
+        }
+    },
+
+    credits: {
+        text: 'Note: 0 means most similar and high values mean most different',
+        position: {
+            align: 'center',
+            y: -30
+        },
+        style: {
+            fontSize: '10pt'
+        }
+    },
+
+    series: [{
+        name: 'Sales per employee',
+        borderWidth: 1,
+        data: [[ 0, 0, 0.00],[ 0, 1, 0.86],[ 0, 2, 3.03],[ 0, 3, 0.38],[ 0, 4, 1.56],[ 0, 5, 4.05],[ 1, 0, 0.86],[ 1, 1, 0.00],
+        [ 1, 2, 0.86],[ 1, 3, 0.12],[ 1, 4, 0.11],[ 1, 5, 1.55],[ 2, 0, 3.03],[ 2, 1, 0.86],[ 2, 2, 0.00],[ 2, 3, 1.55],
+        [ 2, 4, 0.62],[ 2, 5, 2.06],[ 3, 0, 0.38],[ 3, 1, 0.12],[ 3, 2, 1.55],[ 3, 3, 0.00],[ 3, 4, 0.41],[ 3, 5, 2.10],
+        [ 4, 0, 1.56],[ 4, 1, 0.11],[ 4, 2, 0.62],[ 4, 3, 0.41],[ 4, 4, 0.00],[ 4, 5, 0.96],[ 5, 0, 4.05],[ 5, 1, 1.55],
+        [ 5, 2, 2.06],[ 5, 3, 2.10],[ 5, 4, 0.96],[ 5, 5, 0.00]],
+        dataLabels: {
+            enabled: true,
+            color: '#000000'
+        }
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                yAxis: {
+                    labels: {
+                        formatter: function () {
+                            return this.value.charAt(0);
+                        }
+                    }
+                }
+            }
+        }]
+    }
+
+});
 
     var topicsByYear = Highcharts.chart('topicsByYear', {
         chart: {
