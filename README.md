@@ -1,5 +1,4 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/item-series.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -7,9 +6,9 @@
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 <script src="https://code.highcharts.com/highcharts-more.js"></script>
 <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 # Abstract:
 In October 2019, the <b>Swiss federal elections</b> took place and led to a huge paradigm shift. Almost all the parties started talking about climate change and the two Swiss green parties increased considerably their numbers of representatives into
 the parliament. This phenomenon has been called the <b><i>Green Wave</i></b>, and has been designated <a href="https://www.rts.ch/info/culture/10916700-en-suisse-romande-vague-verte-choisie-comme-expression-de-l-annee.html">expression of the year</a>
@@ -131,15 +130,21 @@ To familiarize with political parties of Switzerland, we propose first a small i
 
 ## Are politicians really all the same ?
 
-The political spectrum is often represented as an axis left-right, with sometimes a second axis from conservative to progressive. It is interesting to figure out how close a party is from another one. To do that, we compute the <b>similarities between the different parties</b> by considering the geometrical distances between them.
->  Brace yourself, <b>mathematical stuff</b>:<br> In practice, we associate each word of the tweets to a vector of dimension 100 by looking at the words (the context) around them. Then, we only keep the keywords of our topics and compute the averaged vector of all the keywords used by a given party. To conclude, we compare the obtained vectors using the cosine similarity.
+The political spectrum is often represented as an axis left-right, with sometimes a second axis from conservative to progressive. It is interesting to figure out how close a party is from another one. To do that, we compute the <b>similarities
+    between the different parties</b> by considering the geometrical distances between them.
+> Brace yourself, <b>mathematical stuff</b>:<br> In practice, we associate each word of the tweets to a vector of dimension 100 by looking at the words (the context) around them. Then, we only keep the keywords of our topics and compute the averaged
+vector of all the keywords used by a given party. To conclude, we compare the obtained vectors using the cosine similarity.
 
 The following chart represents the similarities between the parties:
 
 <div id="heatmap"></div>
 
-<<<<<<< HEAD
-#The usual suspects
+We can observe that some results are very close of what we could expect. The left-wing <b>green party is very far from the right-wing UDC party</b>, but nearer from the other left-wing socialist party and the other green (liberal) party.
+Surprisingly, <b>the PLR and the PS</b>, which respectively represent the right and the left, <b>are also very close</b>. A non exhaustive interpretation could be the following: both are talking about the same topics but with different and opposite
+opinions.
+
+# The usual suspects
+
 Without any surprise, the top tweets from each party are well representative of their ideology.
 The followers of the page will tend to retweet or follow posts which confirm the best their beliefs.
 Confirming our topic analysis, we can see that UDC talks about immigration, PS talks about refusing
@@ -158,7 +163,7 @@ about healthcare and PVL about climate, entrepreneurship and youth.
             <div class="centered">
                 <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
                     <a href="https://twitter.com/PSSuisse/status/805395166790094849"></a>
-                </blockquote>   
+                </blockquote>
             </div>
         </div>
     </div>
@@ -191,9 +196,6 @@ about healthcare and PVL about climate, entrepreneurship and youth.
         </div>
     </div>
 </div>
-=======
-We can observe that some results are very close of what we could expect. The left-wing <b>green party is very far from the right-wing UDC party</b>, but nearer from the other left-wing socialist party and the other green (liberal) party. Surprisingly, <b>the PLR and the PS</b>, which respectively represent the right and the left, <b>are also very close</b>. A non exhaustive interpretation could be the following: both are talking about the same topics but with different and opposite opinions.
->>>>>>> d97a82dfe14ba2294e26e5e53ec82af77f15973a
 
 # What ? The party is evolving !
 
@@ -238,7 +240,7 @@ PS being the main opposition to UDC's majority, they adopted a strategy of menti
 <figure class="highcharts-figure">
     <div id="partyGossip"></div>
 </figure>
-Although one strategy in communication catches the eye: don't mention the Green Liberal party. 
+Although one strategy in communication catches the eye: don't mention the Green Liberal party.
 <footer style="background-color: #d32f2f">
     <div class="container">
         <div class="row ">
