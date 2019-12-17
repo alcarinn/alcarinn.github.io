@@ -1,4 +1,6 @@
-# Abstract:
+# 1) Introduction:
+
+## Abstract:
 In October 2019, the <b>Swiss federal elections</b> took place and led to a huge paradigm shift. Almost all the parties started talking about climate change and the two Swiss green parties increased considerably their numbers of representatives into
 the parliament. This phenomenon has been called the <b><i>Green Wave</i></b>, and has been designated <a href="https://www.rts.ch/info/culture/10916700-en-suisse-romande-vague-verte-choisie-comme-expression-de-l-annee.html">expression of the year</a>
 in Romandy. Through this data story, we aim to better understand how the different <b>Swiss political parties</b> communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest
@@ -6,15 +8,14 @@ parties of the last elections and observe if there is any <b>change in their com
 
 <div id="container" style="min-width: 310px; height: 400px; margin: auto"></div>
 
-
-# Introduction:
+## The databases
 
 Twitter is became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the
 essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the sixth largest parties (listed below)
 and some of their members (selected by their <a href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland
 (<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
 
-# Swiss parties you said ?
+# 2) Swiss parties you said ?
 
 To familiarize with political parties of Switzerland, we propose first a small introduction about them, with the most used words in their tweets (members and parties tweets aggregated):
 
@@ -113,9 +114,39 @@ To familiarize with political parties of Switzerland, we propose first a small i
         </div>
     </div>
 </div>
+<br>
+The parties presented above are the sixth largest parties and represent <b>90% of the Swiss population</b>.
+
+## The first rule of Swiss Politics is: you do not talk about PVL
+After this little introduction about Swiss politics, let's see <b>how much the different parties talk about the others parties</b>.
 
 
-# Topics to pick
+You can select the party that you wish:
+<button id="UDC-1">UDC</button>
+<button id="PS-1">PS</button>
+<button id="PLR-1">PLR</button>
+<button id="VERTS-1">VERTS</button>
+<button id="PDC-1">PDC</button>
+<button id="PVL-1">PVL</button>
+
+<figure class="highcharts-figure">
+    <div id="partyGossip"></div>
+</figure>
+
+On the mainlines, we observe that parties tend to talk more about more powerful parties and parties from which they are ideologically distant. Some parties have alliances, so mentions of each other can be high, as it is the case for the VERTS with PS. The PS being the main opposition to UDC's majority in Switzerland, they adopted a strategy of mentioning (criticizing) UDC, they talk about them nearly 6 times more than others parties combined.
+
+Finally, one strategy in communication catches the eye: <b>don't mention the Green Liberal party (PVL).</b>
+
+## RTS each party (TODO)
+TODO
+
+# 3) Topics to pick
+
+## I see dead topics
+TODO LDA ---> our list of topic with corresponding words associated.
+
+## Topics for each party (TODO)
+TODO add the topics for each party with twitter and rts
 
 ## Are politicians really all the same ?
 
@@ -132,9 +163,9 @@ We can observe that some results are very close of what we could expect. The lef
 Surprisingly, <b>the PLR and the PS</b>, which respectively represent the right and the left, <b>are also very close</b>. A non exhaustive interpretation could be the following: both are talking about the same topics but with different and opposite
 opinions.
 
-# The usual suspects
+## The usual suspects
 
-Without any surprise, the top tweets from each party are well representative of their ideology.
+Without any surprise, the <b>top tweets</b> from each party are well <b>representative of their ideology</b>.
 The followers of the page will tend to retweet or follow posts which confirm the best their beliefs.
 Confirming our topic analysis, we can see that UDC talks about immigration, PS talks about refusing
 payments from private corporations, PLR about individualism and work, les VERTS about climate, PDC
@@ -186,10 +217,12 @@ about healthcare and PVL about climate, entrepreneurship and youth.
     </div>
 </div>
 
-# What ? The party is evolving !
+# 4) What ? The party is evolving !
 
-We are interested in how the communication has evolved over the last legislature (2015-2019). Specifically, what are the main topics of each year for the different parties. The following chart represents the evolution of these different topics
-<b>over the years</b>.
+## Trending topics
+
+We are interested in how the communication has evolved over the last legislature (2015-2019). Specifically, what are the main topics of each year for the different parties. The following chart represents the evolution of these different <b>topics
+over the years</b>.
 
 
 You can select the party that you wish:
@@ -214,22 +247,13 @@ These changes could be explained by the actualities e.g., votations, crisis, bom
 and the protection of the environment. The PLR and the PS have respectively <b>increased of approximately 25 and 40 times their communication about the climate</b> (in proportion). About 50% of the communication of the green party in 2019 is also
 about the climate, more than the other green (liberal) party, 36%. Thus the <i>Green Wave</i> has submerged until the twittersphere.
 
-You can select the party that you wish:
-<button id="UDC-1">UDC</button>
-<button id="PS-1">PS</button>
-<button id="PLR-1">PLR</button>
-<button id="VERTS-1">VERTS</button>
-<button id="PDC-1">PDC</button>
-<button id="PVL-1">PVL</button>
+## The Green Wave
+TODO talk about the results of the elections
 
-# The first rule of Swiss Politics ... you don't talk about PVL
-On the mainlines we see that parties tend to talk more about more powerful parties and parties from which they are ideologically distant.
-Some parties have aliances, so mentions of eachother can be high, as it is the case for les VERTS with PS.
-PS being the main opposition to UDC's majority, they adopted a strategy of mentioning (criticizing) UDC, they talk about them nearly 6 times more than other parties combined.
-<figure class="highcharts-figure">
-    <div id="partyGossip"></div>
-</figure>
-Although one strategy in communication catches the eye: don't mention the Green Liberal party.
+# 5) Conclusion
+TODO summarize all our findings
+
+<br>
 <footer style="background-color: #d32f2f">
     <div class="container">
         <div class="row ">
