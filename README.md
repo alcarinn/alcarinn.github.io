@@ -129,8 +129,16 @@ To familiarize with political parties of Switzerland, we propose first a small i
 
 # Topics to pick
 
+## Are politicians really all the same ?
+
+The political spectrum is often represented as an axis left-right, with sometimes a second axis from conservative to progressive. It is interesting to figure out how close a party is from another one. To do that, we compute the <b>similarities between the different parties</b> by considering the geometrical distances between them.
+>  Brace yourself, <b>mathematical stuff</b>:<br> In practice, we associate each word of the tweets to a vector of dimension 100 by looking at the words (the context) around them. Then, we only keep the keywords of our topics and compute the averaged vector of all the keywords used by a given party. To conclude, we compare the obtained vectors using the cosine similarity.
+
+The following chart represents the similarities between the parties:
+
 <div id="heatmap"></div>
 
+<<<<<<< HEAD
 #The usual suspects
 Without any surprise, the top tweets from each party are well representative of their ideology.
 The followers of the page will tend to retweet or follow posts which confirm the best their beliefs.
@@ -183,6 +191,9 @@ about healthcare and PVL about climate, entrepreneurship and youth.
         </div>
     </div>
 </div>
+=======
+We can observe that some results are very close of what we could expect. The left-wing <b>green party is very far from the right-wing UDC party</b>, but nearer from the other left-wing socialist party and the other green (liberal) party. Surprisingly, <b>the PLR and the PS</b>, which respectively represent the right and the left, <b>are also very close</b>. A non exhaustive interpretation could be the following: both are talking about the same topics but with different and opposite opinions.
+>>>>>>> d97a82dfe14ba2294e26e5e53ec82af77f15973a
 
 # What ? The party is evolving !
 
