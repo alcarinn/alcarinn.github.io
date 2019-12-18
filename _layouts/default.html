@@ -392,6 +392,76 @@
 
         });
 
+        var topicsByParty = Highcharts.chart('topicsByParty', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Which topics do parties most talk about ?'
+            },
+            xAxis: {
+                categories: ['VERTS', 'PS', 'PDC', 'PVL', 'PLR', 'UDC']
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '% of mentioned topics'
+                }
+            },
+            tooltip: {
+                pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+                shared: true
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'percent'
+                }
+            },
+            series: [{
+                name: 'Climate',
+                data: [1685, 502, 73, 221, 223, 31]
+            }, {
+                name: 'Immigration',
+                data: [115, 485, 139, 28, 200, 185]
+            }, {
+                name: 'Safety',
+                data: [86, 307, 120, 45, 130, 53]
+            }, {
+                name: 'Liberty',
+                data: [70, 232, 79, 46, 245, 112]
+            }, {
+                name: 'Egality',
+                data: [219, 613, 69, 32, 74, 5]
+            }, {
+                name: 'Economy',
+                data: [355, 343, 175, 106, 304, 56]
+            }, {
+                name: 'Work',
+                data: [225, 1304, 227, 73, 409, 60]
+            }, {
+                name: 'Women',
+                data: [189, 662, 87, 55, 112, 22]
+            }, {
+                name: 'Digital',
+                data: [52, 111, 46, 7, 183, 0]
+            }, {
+                name: 'Family',
+                data: [112, 456, 263, 64, 138, 21]
+            }, {
+                name: 'AVS',
+                data: [27, 400, 150, 13, 113, 23]
+            }, {
+                name: 'Health',
+                data: [88, 386, 284, 18, 125, 10]
+            }, {
+                name: 'Europe',
+                data: [157, 615, 137, 104, 194, 129]
+            }, {
+                name: 'Army',
+                data: [57, 131, 103, 8, 29, 8]
+            }]
+        });
+
         var electionsEvolution = Highcharts.chart('electionsEvolution', {
           chart: {
               type: 'column'
@@ -404,7 +474,7 @@
           },
           yAxis: {
               title: {
-                  text: 'Percentage obtained'
+                  text: '% of votes'
               }
           },
           credits: {

@@ -146,6 +146,8 @@ TODO
 TODO LDA ---> our list of topic with corresponding words associated.
 
 ## Topics for each party (TODO)
+<div id="topicsByParty" style="min-width: 310px; height: 650px; margin: auto"></div>
+
 TODO add the topics for each party with twitter and rts
 
 ## Are politicians really all the same ?
@@ -249,7 +251,7 @@ about the climate, more than the other green (liberal) party, 36%. Thus the <i>G
 
 ## The Green Wave
 Studying the tweets and communication of the parties is really interesting but we now want to observe whether this evolution in the communication led to a change into the political landscape.  Has the growing interest in climate on social media had an impact on the results of the 2019 elections ?
-<div id="electionsEvolution" style="min-width: 310px; height: 650px; margin: auto"></div>
+<div id="electionsEvolution" style="min-width: 310px; height: 600px; margin: auto"></div>
 
 As expected, we observe one main evolution in the results which is... The Green Wave! While most of the parties have decreased their seats in the parliament by one or two seats, both green parties have tripled the number of seats they had. <b>The Green Wave has struck again</b> and this time it is not on the twittersphere but on the Swiss parliament. These results are the proof that the growth of the climate topic isn't just a trend on social media but the necessity to act at a political level is clearly present and people are beginning to understand it and express it in their votations.
 
