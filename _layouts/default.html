@@ -392,6 +392,48 @@
 
         });
 
+        var electionsEvolution = Highcharts.chart('electionsEvolution', {
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: 'Evolution of the elections results between 2015 and 2019'
+          },
+          xAxis: {
+              categories: ['VERTS', 'PS', 'PDC', 'PVL', 'PLR', 'UDC']
+          },
+          yAxis: {
+              title: {
+                  text: 'Percentage obtained'
+              }
+          },
+          credits: {
+              enabled: false
+          },
+          series: [{
+              name: '2015 elections',
+              color:'#e52935',
+              data: [{y:9.42, color:'#84b414'}, {y:22.28, color:'#e52935'},
+              			{y:19.04, color:'#f6a12b'}, {y:2.64, color:'#a5c840'},
+                    {y:23.11, color:'#375191'}, {y:23.51, color:'#66be29'}]
+          }, {
+              name: '2019 elections',
+              color:'#ac2226',
+              data: [{y:19.11, color:'#638710'}, {y:20.14, color:'#ac2226'},
+              			{y:15.00, color:'#b87920'}, {y:6.01, color:'#7c9630'},
+                    {y:20.87, color:'#283868'}, {y:18.86, color:'#498e22'}]
+          }, {
+          		pointPlacement:0.1,
+              name: 'Difference',
+              color: 'black',
+              data: [+9.69, -2.14, -4.04, +3.37, -2.24, -4.65]
+          }]
+      });
+
+
+
+
+
         var gossip = Highcharts.chart('partyGossip', {
 
             chart: {
@@ -903,13 +945,13 @@
                     name: 'Representatives',
                     keys: ['name', 'y', 'color', 'label'],
                     data: [
-                        ['Parti Socialiste', 16, color_dict['PS'], 'PS'],
-                        ['Les Verts', 14, color_dict['VERTS'], 'VERTS'],
+                        ['Les Verts', 10, color_dict['VERTS'], 'VERTS'],
+                        ['Parti Socialiste', 12, color_dict['PS'], 'PS'],
                         ['Parti démocrate-chrétien', 7, color_dict['PDC'], 'PDC'],
-                        ['Parti vert-libéraux', 6, color_dict['PVL'], 'PVL'],
-                        ['Parti libéral-radical', 12, color_dict['PLR'], 'PLR'],
-                        ['Union démocratique du centre', 15, color_dict['UDC'], 'UDC'],
-                        ['Others', 6, '#000000', 'Others']
+                        ['Parti vert-libéraux', 3, color_dict['PVL'], 'PVL'],
+                        ['Parti libéral-radical', 10, color_dict['PLR'], 'PLR'],
+                        ['Union démocratique du centre', 8, color_dict['UDC'], 'UDC'],
+                        ['Others', 2, '#000000', 'Others']
                     ],
                     dataLabels: {
                         enabled: true,
