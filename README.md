@@ -1,9 +1,9 @@
-# 1) Introduction:
+# 1. Introduction:
 
 ## Abstract:
 In October 2019, the <b>Swiss federal elections</b> took place and led to a huge paradigm shift. Almost all the parties started talking about climate change and the two Swiss green parties increased considerably their numbers of representatives into
 the parliament. This phenomenon has been called the <b><i>Green Wave</i></b>, and has been designated <a href="https://www.rts.ch/info/culture/10916700-en-suisse-romande-vague-verte-choisie-comme-expression-de-l-annee.html">expression of the year</a>
-in Romandy. Through this data story, we aim to better understand how the different <b>Swiss political parties</b> communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest
+in Romandy (french speaking part of Switzerland). Through this data story, we aim to better understand how the different <b>Swiss political parties</b> communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest
 parties of the last elections and observe if there is any <b>change in their communication</b> over the years and if so, if it has a relationship with the results of the federal elections.
 
 <div id="container" style="min-width: 310px; height: 400px; margin: auto"></div>
@@ -15,7 +15,7 @@ essential, using often the same recurrent keywords. It provides for us a good wa
 and some of their members (selected by their <a href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland
 (<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
 
-# 2) Swiss parties you said ?
+# 2. Swiss parties, did you say ?
 
 To familiarize with political parties of Switzerland, we propose first a small introduction about them, with the most used words in their tweets (members and parties tweets aggregated):
 
@@ -140,7 +140,7 @@ Finally, one strategy in communication catches the eye: <b>don't mention the Gre
 ## RTS each party (TODO)
 TODO
 
-# 3) Topics to pick
+# 3. Topics to pick
 
 ## I see dead topics
 TODO LDA ---> our list of topic with corresponding words associated.
@@ -219,7 +219,7 @@ about healthcare and PVL about climate, entrepreneurship and youth.
     </div>
 </div>
 
-# 4) What ? The party is evolving !
+# 4. What ? The party is evolving !
 
 ## Trending topics
 
@@ -249,14 +249,14 @@ These changes could be explained by the actualities e.g., votations, crisis, bom
 and the protection of the environment. The PLR and the PS have respectively <b>increased of approximately 25 and 40 times their communication about the climate</b> (in proportion). About 50% of the communication of the green party in 2019 is also
 about the climate, more than the other green (liberal) party, 36%. Thus the <i>Green Wave</i> has submerged until the twittersphere.
 
-## The Green Wave
-Studying the tweets and communication of the parties is really interesting but we now want to observe whether this evolution in the communication led to a change into the political landscape.  Has the growing interest in climate on social media had an impact on the results of the 2019 elections ?
-<div id="electionsEvolution" style="min-width: 310px; height: 600px; margin: auto"></div>
+## Green is the new black
+Studying the tweets and communication of the parties is really interesting but we now want to observe whether this <b>evolution in the communication led to a change into the political landscape</b>.  Has the growing interest in climate on social media had an impact on the results of the 2019 elections ?
+<div id="electionsEvolution" style="min-width: 310px; height: 400px; margin: auto"></div>
 
-As expected, we observe one main evolution in the results which is... The Green Wave! While most of the parties have decreased their seats in the parliament by one or two seats, both green parties have tripled the number of seats they had. <b>The Green Wave has struck again</b> and this time it is not on the twittersphere but on the Swiss parliament. These results are the proof that the growth of the climate topic isn't just a trend on social media but the necessity to act at a political level is clearly present and people are beginning to understand it and express it in their votations.
+As expected, we observe one main evolution in the results which is... The <i>Green Wave</i>! While most of the parties have decreased their seats in the parliament by one or two seats, both green parties have tripled the number of seats they had. <b>The <i>Green Wave</i> has struck again</b> and this time it is not on the twittersphere but in the Swiss parliament. These results show that the growth of the climate topic is not just a trend on social media but reflect the decisions of the Swiss people to vote for parties which put climate as the number one topic.
 
-# 5) Conclusion
-TODO summarize all our findings
+# 5. Conclusion
+Through this project, we first observe that the <b>tweets are really well representative of the ideologies of the different parties</b>. The keywords used, the top tweets and the topics addressed really match their beliefs. This is not really surprising, twitter is became a direct way for the politicians to discuss with their followers and happily the politicians seem to be coherent in their beliefs, whatever the channel of information. We also notice that <b>all the parties really increased their communications about the climate</b>. In 2015, the climate was the top topic only for the two green parties and was only approximately 6% of the topics addressed. in 2019, it is the top one topic for four parties and is approximately 34% of the topics addressed, which represents an increasing of factor more than five. Finally, <b>only the green parties increased their representation in the Swiss parliament</b> in 2019. The population preferred to vote for parties who were already talking about climate in 2015. What's about 2023 ?
 
 <br>
 <footer style="background-color: #d32f2f">
@@ -265,7 +265,9 @@ TODO summarize all our findings
             <div class="col text-white text-center">
                 <p>
                     <br>
-                    Deniz Ira, Isabelle Pumford, Arthur Vignon, Robin Zbinden • 2019
+                    Deniz Ira, Isabelle Pumford, Arthur Vignon & Robin Zbinden
+                    <br>
+                    ADA, EPFL
                     <br>
                     <a href="https://github.com/ArthurVignon/ADA_project_RADI"><b>GitHub Repository</b></a>
                     •
