@@ -258,6 +258,14 @@ As expected, we observe one main evolution in the results which is... The <i>Gre
 # 5. Conclusion
 Through this project, we first observe that the <b>tweets are really well representative of the ideologies of the different parties</b>. The keywords used, the top tweets and the topics addressed really match their beliefs. This is not really surprising, twitter is became a direct way for the politicians to discuss with their followers and happily the politicians seem to be coherent in their beliefs, whatever the channel of information. We also notice that <b>all the parties really increased their communications about the climate</b>. In 2015, the climate was the top topic only for the two green parties and was only approximately 6% of the topics addressed. in 2019, it is the top one topic for four parties and is approximately 34% of the topics addressed, which represents an increasing of factor more than five. Finally, <b>only the green parties increased their representation in the Swiss parliament</b> in 2019. The population preferred to vote for parties who were already talking about climate in 2015. What's about 2023 ?
 
+<div id="adaImage" align="center">
+    <br>
+    <img src="static/images/Ada_Marra.jpg" height="340" width="410">
+    <br>
+    <b>Ada</b> Marra, Swiss politician
+</div>
+
+
 <br>
 <footer style="background-color: #d32f2f">
     <div class="container">
@@ -267,7 +275,7 @@ Through this project, we first observe that the <b>tweets are really well repres
                     <br>
                     Deniz Ira, Isabelle Pumford, Arthur Vignon & Robin Zbinden
                     <br>
-                    ADA, EPFL
+                    <button id="ada"><b>ADA</b></button>, EPFL
                     <br>
                     <a href="https://github.com/ArthurVignon/ADA_project_RADI"><b>GitHub Repository</b></a>
                     •
@@ -327,4 +335,6 @@ Through this project, we first observe that the <b>tweets are really well repres
             animation: octocat-wave 560ms ease-in-out
         }
     }
+
+    #ada { background:none;border:none;color:white }
 </style>
