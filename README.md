@@ -13,7 +13,7 @@ parties of the last elections and observe if there is any <b>change in their com
 Twitter is became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the
 essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the sixth largest parties (listed below)
 and some of their members (selected by their <a href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland
-(<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
+(<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years using a different medium. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
 
 # 2. Swiss parties, did you say ?
 
@@ -137,8 +137,12 @@ On the mainlines, we observe that parties tend to talk more about more powerful 
 
 Finally, one strategy in communication catches the eye: <b>don't mention the Green Liberal party (PVL).</b>
 
-## RTS each party (TODO)
-TODO
+## Who's talking ?
+Aside from the information released by each party through their Twitters, we thought it would be interesting to analyze the appearences of representatives of each party on RTS. RTS is where a large number of the romandie
+population gain information about each of the political parties and their views so the representation of each party on these platforms is crucial for them to convey their messages. Below is a comparison between the contributors
+appearing in RTS broadcasts during the 2015 and 2019 election years and overall between 2010 and 2019.
+
+<div id="contributorProportions" style="min-width: 310px; height: 400px; margin: auto"></div>
 
 # 3. Topics to pick
 
