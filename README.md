@@ -154,7 +154,6 @@ In order to understand what political topics were being discussed with on RTS an
 
 These topics along with some of our creation were then used as the basis for our topic analysis below.
 
-... Isabelle tells how she did LDA and the list of topics she obtained...
 
 After running the LDA modeling which gave an idea of the number <i>n</i> TODO REPLACE N different topics approached by the parties, we decided to design the 14 topics on which we will mainly focus. We drew the list of words corresponding to each topic by hand and were as much exhaustive as possible by filtering words with their roots in order to also include derivatives of these words and hashtags containing those words. The resulting list is in the form of a dictionary:
 
