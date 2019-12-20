@@ -10,7 +10,7 @@ parties of the last elections and observe if there is any <b>change in their com
 
 ## The databases
 
-Twitter became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the
+Twitter became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas in order to keep only the
 essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the six largest parties (listed below)
 and some of their members (selected by their <a href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland
 (<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years using a different medium. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
@@ -133,14 +133,12 @@ You can select the party that you wish:
     <div id="partyGossip"></div>
 </figure>
 
-On the mainlines, we observe that parties tend to talk more about more powerful parties and parties from which they are ideologically distant. Some parties have alliances, so mentions of each other can be high, as it is the case for the VERTS with PS. The PS being the main opposition to UDC's majority in Switzerland, they adopted a strategy of mentioning (criticizing) UDC, they talk about them nearly 6 times more than others parties combined.
+On the mainlines, we observe that parties tend to talk more about more powerful parties and parties from which they are ideologically distant. Some parties have alliances, so mentions of each other can be high, as it is the case for the VERTS with the PS. The PS being the main opposition to UDC's majority in Switzerland, they adopted a strategy of mentioning (criticizing) UDC, they talk about them nearly 6 times more than the others parties combined.
 
 Finally, one strategy in communication catches the eye: <b>don't mention the Green Liberal party (PVL).</b>
 
 ## Who's talking ?
-Aside from the information released by each party through their Twitter account, we  it would be interesting to analyze the appearences of representatives of each party on RTS. RTS is where a large number of the romandie
-population gain information about each of the political parties and their views so the representation of each party on these platforms is crucial for them to convey their messages. Below is a comparison between the contributors
-appearing in RTS broadcasts during the 2015 and 2019 election years and overall between 2010 and 2019.
+Aside from the information released by each party through their Twitter account, we will analyze the appearances of representatives of each party on RTS. RTS is the media where a large number of the romandy population get information about the political parties and their views. Therefore, the representation of each party on these platforms is crucial for them to convey their messages. Below is a comparison between the contributors appearing in RTS broadcasts during the 2015 and 2019 election years.
 
 <div id="contributorProportions" style="min-width: 310px; height: 400px; margin: auto"></div>
 
@@ -158,17 +156,12 @@ In order to understand what political topics were being discussed with on RTS an
 
 These topics along with some of our creation were then used as the basis for our topic analysis below.
 
-
-After running the LDA modeling which gave an idea of the 9 different topics approached by the parties, we design the 14 topics on which we will mainly focus. We drew the list of words corresponding to each topic, searching for keywords in Swiss Politics for each of them, and we made them as much exhaustive as possible by filtering words with their roots in order to also include derivatives of these words and hashtags containing those words.
-
-
-
-## Topics for each party (TODO)
-
+## Topics for each party
+After running the LDA modeling which gave an idea of 9 different topics approached by the parties on rts, we design the 14 topics on which we will mainly focus. We drew the list of words corresponding to each topic, searching for keywords in Swiss Politics for each of them, and we made them as much exhaustive as possible by filtering words with their roots in order to also include derivatives of these words and hashtags containing those words.
+We now observe the distribution of those topics for the all the tweets of each party.
 <div id="topicsByParty" style="min-width: 310px; height: 650px; margin: auto"></div>
 
-TODO add the topics for each party with Twitter and rts
-
+This graph shows the consistency of the parties between the values they promote and their communication on social media. For example, we observe that the green parties are mainly focused on climate while UDC usually talks about immigration and Europe, PDC mentions the family more often than the other parties and PLR is the only party who mentions digitalization with a percentage higher than 2%. Furthermore we observe that right parties are used to talk about liberty while the left ones advocates equality. For the rest of the topics it varies for each one of them and it would be interesting to study their evolution during the 50th legislature.
 ## Are politicians really all the same ?
 
 The political spectrum is often represented as an axis left-right, with sometimes a second axis from conservative to progressive. It is interesting to figure out how close a party is from another one. To do that, we compute the <b>similarities
