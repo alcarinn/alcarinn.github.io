@@ -139,7 +139,11 @@ On the mainlines, we observe that parties tend to talk more about more powerful 
 Finally, one communication strategy catches the eye: <b>don't mention the Green Liberal Party (PVL).</b>
 
 ## Who's talking ?
+<<<<<<< HEAD
 Aside from the information released by each party through their Twitter account, we analyze the appearances of representatives of each party on RTS. RTS is the media where a large number of the Romandy population get information about the political parties and their views. Therefore, the representation of each party on these platforms is crucial for them to convey their messages. Below is a comparison of the contributors appearing in RTS broadcasts during the 2015 and 2019 election years.
+=======
+Aside from the information released by each party through their Twitter account, we analyze the appearances of representatives of each party on RTS. RTS is the media where a large number of the Romandy population get information about the political parties and their views. Therefore, the representation of each party on these platforms is crucial for them to convey their messages. Below is a comparison between the contributors appearing in RTS broadcasts from 2012-2015 and from 2016-2019 election years.
+>>>>>>> dfa4fba7ec3f803075faac31b18bad710db73033
 
 <div id="contributorProportions" style="min-width: 310px; height: 400px; margin: auto"></div>
 
@@ -242,6 +246,7 @@ about healthcare and PVL about climate, entrepreneurship and youth.
 We are interested in how the communication has evolved over the last legislature (2015-2019); specifically, what are the main topics of each year for the different parties. The following chart represents the evolution of these different <b>topics
 over the years</b>.
 
+<b>All</b> is an aggregate of all parties Twitter data while the <b>RTS</b> data only looks at the dominant topics for each broadcast found through the LDA topic modeling. 
 
 You can select the party that you wish:
 <button id="All">All</button>

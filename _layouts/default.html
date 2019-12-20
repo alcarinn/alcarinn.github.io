@@ -1022,6 +1022,49 @@
                 title: {
                     text: 'Evolution of the topics over the years in RTS broadcasts'
                 },
+				series: [{
+                    name: 'Climate',
+                    data: [34, 43, 40, 27, 65]
+                }, {
+                    name: 'Immigration',
+                    data: [0, 0, 0, 0, 0]
+                }, {
+                    name: 'Safety',
+                    data: [18, 40, 44, 30, 28]
+                }, {
+                    name: 'Freedom',
+                    data: [0, 0, 0, 0, 0]
+                }, {
+                    name: 'Equality',
+                    data: [0, 0, 0, 0, 0]
+                }, {
+                    name: 'Economy',
+                    data: [24, 21, 20, 18, 17]
+                }, {
+                    name: 'Work',
+                    data: [0, 0, 0, 0, 0]
+                },  {
+                    name: 'Women',
+                    data: [16, 14, 23, 48, 59]
+                }, {
+                    name: 'Digital',
+                    data: [0, 0, 0, 0, 0]
+                }, {
+                    name: 'Family',
+                    data: [25, 30, 22, 19, 24]
+                }, {
+                    name: 'AVS',
+                    data: [40, 48, 66, 50, 47]
+                }, {
+                    name: 'Health',
+                    data: [15, 21, 29, 36, 32]
+                },  {
+                    name: 'Europe',
+                    data: [3, 2, 4, 24, 64]
+                }, {
+                    name: 'Army',
+                    data: [62, 37, 21, 18, 24]
+                }],
 				tooltip: {
                 pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} occurences)<br/>',
                 split: true
@@ -1047,35 +1090,8 @@
 						}
 					}
 				},
-                series: [{
-                    name: 'Climate',
-                    data: [34, 43, 40, 27, 65]
-                }, {
-                    name: 'Women',
-                    data: [16, 14, 23, 48, 59]
-                }, {
-                    name: 'Economy',
-                    data: [24, 21, 20, 18, 17]
-                }, {
-                    name: 'Family',
-                    data: [25, 30, 22, 19, 24]
-                }, {
-                    name: 'Work',
-                    data: [16, 15, 21, 35, 20]
-                }, {
-                    name: 'Safety',
-                    data: [18, 40, 44, 30, 28]
-                }, {
-                    name: 'Army',
-                    data: [62, 37, 21, 18, 24]
-                }, {
-                    name: 'AVS',
-                    data: [40, 48, 66, 50, 47]
-                }, {
-                    name: 'Health',
-                    data: [15, 21, 29, 36, 32]
-                }, ]
             });
+			chart.redraw();
         });
         $('#UDC-1').click(function() {
             gossip.update({
