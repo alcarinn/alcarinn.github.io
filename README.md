@@ -277,6 +277,7 @@ You can select the party that you wish:
 <button id="VERTS">VERTS</button>
 <button id="PDC">PDC</button>
 <button id="PVL">PVL</button>
+<button id="RTS">RTS</button>
 
 <div id="topicsByYear" style="min-width: 310px; height: 650px; margin: auto"></div>
 
