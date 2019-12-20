@@ -2,8 +2,8 @@
 
 ## Abstract:
 In October 2019, the <b>Swiss federal elections</b> took place and led to a huge paradigm shift. Almost all the parties started talking about climate change and the two Swiss green parties increased considerably their numbers of representatives into
-the parliament. This phenomenon has been called the <b><i>Green Wave</i></b>, and has been designated <a href="https://www.rts.ch/info/culture/10916700-en-suisse-romande-vague-verte-choisie-comme-expression-de-l-annee.html" class = "link">expression of the year</a>
-in Romandy (french speaking part of Switzerland). Through this data story, we aim to better understand how the different <b>Swiss political parties</b> communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest
+the parliament. This phenomenon has been called the <b><i>Green Wave</i></b>, and has been designated <a target="blank" href="https://www.rts.ch/info/culture/10916700-en-suisse-romande-vague-verte-choisie-comme-expression-de-l-annee.html" class = "link">expression of the year</a>
+in Romandy (French speaking part of Switzerland). Through this data story, we aim to better understand how the different <b>Swiss political parties</b> communicate their ideas to the public, e.g., what are the keywords and topics they address the most. We concentrate on the six largest
 parties of the last elections and observe if there is any <b>change in their communication</b> over the years and if so, if it has a relationship with the results of the federal elections.
 
 <div id="container" style="min-width: 310px; height: 400px; margin: auto"></div>
@@ -12,12 +12,12 @@ parties of the last elections and observe if there is any <b>change in their com
 
 Twitter became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas in order to keep only the
 essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the six largest parties (listed below)
-and some of their members (selected by their <a href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481" class = "link">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland
-(<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years using a different medium. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
+and some of their members (selected by their <a target="blank" href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481" class = "link">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland
+(<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years using a different medium. Finally, we compare the changes in communication of the parties with the <b>results of the federal</b> elections using the associated datasets.
 
 # 2. Swiss parties, did you say ?
 
-To familiarize with political parties of Switzerland, we propose first a small introduction about them, with the most used words in their tweets (members and parties tweets aggregated):
+To familiarize ourselves with political parties of Switzerland, we propose first a small introduction about them, with the most used words in their tweets (members and parties tweets aggregated):
 
 <div class="container">
     <div class="row" style="background-color: #66be29;">
@@ -27,7 +27,7 @@ To familiarize with political parties of Switzerland, we propose first a small i
         <div class="col-lg-6 col-md-6 nopadding" style="color: #FFFFFF;">
             <div class="boxtext">
                 <h2> UDC </h2>
-                The Swiss People’s party (Union Démocratique du Centre in French) is a national-conservative, <b>right-wing</b> populist party. It’s the party with the more members in the Swiss parliament. They fight
+                The Swiss People’s party (Union Démocratique du Centre in French) is a national-conservative, <b>right-wing</b> populist party. It’s the party with the most members in the Swiss parliament. They fight
                 for the preservation of Switzerland's political sovereignty (they are Eurosceptic) and are against mass immigration by making the asylum laws stricter. The party opposes governmental measures for environmental protection.
             </div>
         </div>
@@ -139,17 +139,17 @@ On the mainlines, we observe that parties tend to talk more about more powerful 
 Finally, one strategy in communication catches the eye: <b>don't mention the Green Liberal party (PVL).</b>
 
 ## Who's talking ?
-Aside from the information released by each party through their Twitter account, we will analyze the appearances of representatives of each party on RTS. RTS is the media where a large number of the romandy population get information about the political parties and their views. Therefore, the representation of each party on these platforms is crucial for them to convey their messages. Below is a comparison between the contributors appearing in RTS broadcasts during the 2015 and 2019 election years.
+Aside from the information released by each party through their Twitter account, we analyze the appearances of representatives of each party on RTS. RTS is the media where a large number of the romandy population get information about the political parties and their views. Therefore, the representation of each party on these platforms is crucial for them to convey their messages. Below is a comparison between the contributors appearing in RTS broadcasts during the 2015 and 2019 election years.
 
 <div id="contributorProportions" style="min-width: 310px; height: 400px; margin: auto"></div>
 
 > **Which party uses more emojis ?**<br>
-The Green Party uses nearly two times more emojis than any other party. In fact, even their name on twitter, Les VERTS suisses 🌻 contains an emoji. Their most used emoji is 🌍.
+The green party uses nearly two times more emojis than any other party. In fact, even their name on twitter, Les VERTS suisses 🌻 contains an emoji. Their most used emoji is 🌍.
 
 # 3. Topics to pick
 
 ## I see dead topics
-In order to understand what political topics were being discussed with on RTS and Twitter, we first conducted LDA topic modeling using the RTS subtitles, speechToText and summaries. Below are word cloud representations of selected topics with our title assignments.
+In order to understand what political topics were being discussed with on RTS and Twitter, we first conducted <a target="blank" class = "link" href="https://towardsdatascience.com/nlp-extracting-the-main-topics-from-your-dataset-using-lda-in-minutes-21486f5aa925">LDA topic modeling</a> using the RTS subtitles and summaries. It results in a list of topics with an associated set of word for each of them. Below are word cloud representations of selected topics with our title assignments.
 
 <div id="LDAModeling9" align="center">
     <br>
@@ -165,7 +165,7 @@ After running the LDA modeling which gave an idea of 9 different topics approach
 We now observe the distribution of those topics for the all the tweets of each party.
 <div id="topicsByParty" style="min-width: 310px; height: 650px; margin: auto"></div>
 
-This graph shows the consistency of the parties between the values they promote and their communication on social media. For example, we observe that the green parties are mainly focused on climate while UDC usually talks about immigration and Europe, PDC mentions the family more often than the other parties and PLR is the only party who mentions digitalization with a percentage higher than 2%. Furthermore we observe that right parties are used to talk about liberty while the left ones advocates equality. For the rest of the topics it varies for each one of them and it would be interesting to study their evolution during the 50th legislature.
+This graph shows the consistency of the parties between the values they promote and their communication on social media. For example, we observe that the green parties are mainly focused on climate while UDC usually talks about immigration and Europe, and PDC mentions the family more often than the other parties. Furthermore we observe that right parties are used to talk about liberty while the left ones advocate equality. For the rest of the topics it varies for each one of them and it would be interesting to study their evolution during the last legislature.
 ## Are politicians really all the same ?
 
 The political spectrum is often represented as an axis left-right, with sometimes a second axis from conservative to progressive. It is interesting to figure out how close a party is from another one. To do that, we compute the <b>similarities
