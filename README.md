@@ -139,11 +139,7 @@ On the mainlines, we observe that parties tend to talk more about more powerful 
 Finally, one communication strategy catches the eye: <b>don't mention the Green Liberal Party (PVL).</b>
 
 ## Who's talking ?
-<<<<<<< HEAD
-Aside from the information released by each party through their Twitter account, we analyze the appearances of representatives of each party on RTS. RTS is the media where a large number of the Romandy population get information about the political parties and their views. Therefore, the representation of each party on these platforms is crucial for them to convey their messages. Below is a comparison of the contributors appearing in RTS broadcasts during the 2015 and 2019 election years.
-=======
 Aside from the information released by each party through their Twitter account, we analyze the appearances of representatives of each party on RTS. RTS is the media where a large number of the Romandy population get information about the political parties and their views. Therefore, the representation of each party on these platforms is crucial for them to convey their messages. Below is a comparison between the contributors appearing in RTS broadcasts from 2012-2015 and from 2016-2019 election years.
->>>>>>> dfa4fba7ec3f803075faac31b18bad710db73033
 
 <div id="contributorProportions" style="min-width: 310px; height: 400px; margin: auto"></div>
 
