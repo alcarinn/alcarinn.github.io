@@ -149,14 +149,12 @@ appearing in RTS broadcasts during the 2015 and 2019 election years and overall 
 ## I see dead topics
 In order to understand what political topics were being discussed with on RTS and Twitter, we first conducted LDA topic modeling using the RTS subtitles, speechToText and summaries. Below are word cloud representations of selected topics with our title assignments.
 
-<div id="adaImage" align="center">
+<div id="LDAModeling9" align="center">
     <br>
 		<img src="static/images/LDAModeling9.png" alt="LDAModeling9">
     <br>
     <b></b>
 </div>
-
-<img src="static/images/LDAModeling9.png" alt="LDAModeling9">
 
 These topics along with some of our creation were then used as the basis for our topic analysis below.
 
