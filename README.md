@@ -159,37 +159,25 @@ In order to understand what political topics were being discussed with on RTS an
 These topics along with some of our creation were then used as the basis for our topic analysis below.
 
 
-After running the LDA modeling which gave an idea of the number <i>n</i> TODO REPLACE N different topics approached by the parties, we decided to design the 14 topics on which we will mainly focus. We drew the list of words corresponding to each topic by hand and were as much exhaustive as possible by filtering words with their roots in order to also include derivatives of these words and hashtags containing those words. The resulting list is in the form of a dictionary:
+After running the LDA modeling which gave an idea of the 9 different topics approached by the parties, we decided to design the 14 topics on which we will mainly focus. We drew the list of words corresponding to each topic by hand and were as much exhaustive as possible by filtering words with their roots in order to also include derivatives of these words and hashtags containing those words.
 
-                {
-                'Climate':'climat|environnement|co2',
+|    Topic    |                 Word List                 |
+|:-----------:|:-----------------------------------------:|
+|   Climate   |          climat,environnement,co2         |
+| Immigration |      migration,asile,étranger,réfugié     |
+|    Safety   |          sécurité,crime,sûr,sûre          |
+|   Freedom   |               liberté,libre               |
+|   Equality  |             égalité,solidaire             |
+|   Economy   |              économie,marché              |
+|     Work    | travail,emploi,entreprise,chômage,salaire |
+|    Women    |                   femme                   |
+|   Digital   |         numérique,internet,digital        |
+|    Family   |           famille,mariage,enfant          |
+|     AVS     |                    avs                    |
+|    Health   |           santé,maladie,médecin           |
+|    Europe   |                 Europe,UE                 |
+|     Army    |           armée,militaire,gripen          |
 
-                'Immigration':'migration|asile|étranger|réfugié',
-
-                'Safety':'sécurité|crimi|crime|sûr\b|sûre\b',
-
-                'Liberty':'liberté|libre',
-
-                'Egality':'égalit|solida',
-
-                'Economy':'économi|marché',
-
-                'Work':'travail|emploi|entreprise|chômage|chômeur|salaire|salarial',
-
-                'Women':'femme',
-
-                'Digital':'numérique|internet|digital',
-
-                'Family':'famille|mariage|enfant',
-
-                'AVS':'avs',
-
-                'Health':'santé|maladie|médecin',
-
-                'Europe':'europ| ue |#ue',
-
-                'Army':'armée|militair|militaris|gripen'
-                  }
 
 ## Topics for each party (TODO)
 
@@ -304,7 +292,7 @@ Studying the tweets and communication of the parties is interesting but we now w
 As expected, we observe one main evolution in the results which is... The <i>Green Wave</i>! While most of the parties have decreased their seats in the parliament by one or two seats, both green parties have tripled the number of seats they had. <b>The <i>Green Wave</i> has struck again</b> and this time it is not on the twittersphere but in the Swiss parliament. These results show that the growth of the climate topic is not just a trend on social media but reflect the decisions of the Swiss people to vote for parties which put climate as the number one topic.
 
 # 5. Conclusion
-Through this project, we first observe that the <b>tweets are representative of the ideologies of the different parties</b>. The keywords used, the top tweets and the topics addressed match their beliefs. Indeed, Twitter became a direct way for the politicians to discuss with their followers and the politicians are mostly coherent in their beliefs, whatever the channel of information. We also notice that <b>all the parties increased their communications about the climate</b>. In 2015, the climate was the top topic only for the two green parties and was only approximately 6% of the topics addressed. In 2019, it is the top one topic for four parties and is approximately 34% of the topics addressed, which corresponds is an increase of five times more the 2015 percentage. Finally, <b>only the green parties increased their representation in the Swiss parliament</b> in 2019. The population preferred to vote for parties who were already talking about climate in 2015. How might this trend evolve over the next 4 years ?
+Through this project, we first observe that the <b>tweets are representative of the ideologies of the different parties</b>. The keywords used, the top tweets and the topics addressed match their beliefs. Indeed, Twitter became a direct way for the politicians to discuss with their followers and the politicians are mostly coherent in their beliefs, whatever the channel of information. We also notice that <b>all the parties increased their communications about the climate</b>. In 2015, the climate was the top topic only for the two green parties and was only approximately 6% of the topics addressed. In 2019, it is the top one topic for four parties and is approximately 34% of the topics addressed, which corresponds to an increase of five times more the 2015 percentage. Finally, <b>only the green parties increased their representation in the Swiss parliament</b> in 2019. The population preferred to vote for parties who were already talking about climate in 2015. How might this trend evolve over the next 4 years ?
 
 <div id="adaImage" align="center">
     <br>
