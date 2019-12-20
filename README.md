@@ -11,7 +11,7 @@ parties of the last elections and observe if there is any <b>change in their com
 ## The databases
 
 Twitter became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the
-essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the sixth largest parties (listed below)
+essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the six largest parties (listed below)
 and some of their members (selected by their <a href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland
 (<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years using a different medium. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
 
@@ -138,7 +138,7 @@ On the mainlines, we observe that parties tend to talk more about more powerful 
 Finally, one strategy in communication catches the eye: <b>don't mention the Green Liberal party (PVL).</b>
 
 ## Who's talking ?
-Aside from the information released by each party through their Twitter account, we thought it would be interesting to analyze the appearences of representatives of each party on RTS. RTS is where a large number of the romandie
+Aside from the information released by each party through their Twitter account, we  it would be interesting to analyze the appearences of representatives of each party on RTS. RTS is where a large number of the romandie
 population gain information about each of the political parties and their views so the representation of each party on these platforms is crucial for them to convey their messages. Below is a comparison between the contributors
 appearing in RTS broadcasts during the 2015 and 2019 election years and overall between 2010 and 2019.
 
@@ -159,7 +159,7 @@ In order to understand what political topics were being discussed with on RTS an
 These topics along with some of our creation were then used as the basis for our topic analysis below.
 
 
-After running the LDA modeling which gave an idea of the 9 different topics approached by the parties, we decided to design the 14 topics on which we will mainly focus. We drew the list of words corresponding to each topic, searching for keywords in Swiss Politics for each of them, and we made them as much exhaustive as possible by filtering words with their roots in order to also include derivatives of these words and hashtags containing those words.
+After running the LDA modeling which gave an idea of the 9 different topics approached by the parties, we design the 14 topics on which we will mainly focus. We drew the list of words corresponding to each topic, searching for keywords in Swiss Politics for each of them, and we made them as much exhaustive as possible by filtering words with their roots in order to also include derivatives of these words and hashtags containing those words.
 
 
 
