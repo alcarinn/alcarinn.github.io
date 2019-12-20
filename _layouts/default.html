@@ -313,6 +313,9 @@
                 tickmarkPlacement: 'on',
                 text: 'Years',
             },
+
+            colors: ["#90ed7d", "#434348", "#7cb5ec", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1", "#B58D51", "#BF5436", "#305DB0", "#EBD2CC"],
+
             yAxis: {
                 labels: {
                     format: '{value}%'
@@ -417,6 +420,7 @@
                     stacking: 'percent'
                 }
             },
+            colors: ["#90ed7d", "#434348", "#7cb5ec", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1", "#B58D51", "#BF5436", "#305DB0", "#EBD2CC"],
             series: [{
                 name: 'Climate',
                 data: [1685, 502, 73, 221, 223, 31]
@@ -463,82 +467,170 @@
         });
 
         var electionsEvolution = Highcharts.chart('electionsEvolution', {
-          chart: {
-              type: 'column'
-          },
-          title: {
-              text: 'Evolution of the elections results between 2015 and 2019'
-          },
-          xAxis: {
-              categories: ['VERTS', 'PS', 'PDC', 'PVL', 'PLR', 'UDC']
-          },
-          yAxis: {
-              title: {
-                  text: '% of votes'
-              }
-          },
-          credits: {
-              enabled: false
-          },
-          series: [{
-              name: '2015 elections',
-              color:'#e52935',
-              data: [{y:9.42, color:'#84b414'}, {y:22.28, color:'#e52935'},
-              			{y:19.04, color:'#f6a12b'}, {y:2.64, color:'#a5c840'},
-                    {y:23.11, color:'#375191'}, {y:23.51, color:'#66be29'}]
-          }, {
-              name: '2019 elections',
-              color:'#ac2226',
-              data: [{y:19.11, color:'#638710'}, {y:20.14, color:'#ac2226'},
-              			{y:15.00, color:'#b87920'}, {y:6.01, color:'#7c9630'},
-                    {y:20.87, color:'#283868'}, {y:18.86, color:'#498e22'}]
-          }, {
-          		pointPlacement:0.1,
-              name: 'Difference',
-              color: 'black',
-              data: [+9.69, -2.14, -4.04, +3.37, -2.24, -4.65]
-          }]
-      });
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Evolution of the elections results between 2015 and 2019'
+            },
+            xAxis: {
+                categories: ['VERTS', 'PS', 'PDC', 'PVL', 'PLR', 'UDC']
+            },
+            yAxis: {
+                title: {
+                    text: '% of votes'
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: '2015 elections',
+                color: '#e52935',
+                data: [{
+                        y: 9.42,
+                        color: '#84b414'
+                    }, {
+                        y: 22.28,
+                        color: '#e52935'
+                    },
+                    {
+                        y: 19.04,
+                        color: '#f6a12b'
+                    }, {
+                        y: 2.64,
+                        color: '#a5c840'
+                    },
+                    {
+                        y: 23.11,
+                        color: '#375191'
+                    }, {
+                        y: 23.51,
+                        color: '#66be29'
+                    }
+                ]
+            }, {
+                name: '2019 elections',
+                color: '#ac2226',
+                data: [{
+                        y: 19.11,
+                        color: '#638710'
+                    }, {
+                        y: 20.14,
+                        color: '#ac2226'
+                    },
+                    {
+                        y: 15.00,
+                        color: '#b87920'
+                    }, {
+                        y: 6.01,
+                        color: '#7c9630'
+                    },
+                    {
+                        y: 20.87,
+                        color: '#283868'
+                    }, {
+                        y: 18.86,
+                        color: '#498e22'
+                    }
+                ]
+            }, {
+                pointPlacement: 0.1,
+                name: 'Difference',
+                color: 'black',
+                data: [+9.69, -2.14, -4.04, +3.37, -2.24, -4.65]
+            }]
+        });
 
 
-		var contributorProportions = Highcharts.chart('contributorProportions', {
-          chart: {
-			  renderTo: 'container',
-              type: 'pie'
-          },
-          title: {
-              text: 'RTS contributor proportions 2015 to 2019'
-          },
-		  tooltip: {
-			  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-		  },
-		  plotOptions: {
-			  pie: {
-				  allowPointSelect: true,
-				  cursor: 'pointer',
-				  size:200,
-				  dataLabels: {
-					  enabled: true,
-					  format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-				  }
-			  }
-		  },
-          series: [{
-              name: '2015',
-              color:'#e52935',
-			  center: [200, 100],
-              data: [{name: 'UDC', y:141, color:color_dict['UDC']}, {name: 'PDC',y:89, color:color_dict['PDC']},
-              			{name: 'PS',y:123, color:color_dict['PS']}, {name: 'PLR',y:117, color:color_dict['PLR']},
-                    {name: 'Verts',y:50, color:color_dict['VERTS']}, {name: 'Verts Lib',y:20, color:color_dict['PVL']}]
-          }, {
-              name: '2019',
-              color:'#e52935',
-			  center: [600, 100],
-              data: [{name: 'UDC', y:109, color:color_dict['UDC']}, {name: 'PDC',y:80, color:color_dict['PDC']},
-              			{name: 'PS',y:157, color:color_dict['PS']}, {name: 'PLR',y:173, color:color_dict['PLR']},
-                    {name: 'Verts',y:121, color:color_dict['VERTS']}, {name: 'Verts Lib',y:22, color:color_dict['PVL']}]
-          }]
-      });
+        var contributorProportions = Highcharts.chart('contributorProportions', {
+            chart: {
+                renderTo: 'container',
+                type: 'pie'
+            },
+            title: {
+                text: 'RTS contributor proportions 2015 to 2019'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    size: 200,
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+            series: [{
+                name: '2015',
+                color: '#e52935',
+                center: [200, 100],
+                data: [{
+                        name: 'UDC',
+                        y: 141,
+                        color: color_dict['UDC']
+                    }, {
+                        name: 'PDC',
+                        y: 89,
+                        color: color_dict['PDC']
+                    },
+                    {
+                        name: 'PS',
+                        y: 123,
+                        color: color_dict['PS']
+                    }, {
+                        name: 'PLR',
+                        y: 117,
+                        color: color_dict['PLR']
+                    },
+                    {
+                        name: 'Verts',
+                        y: 50,
+                        color: color_dict['VERTS']
+                    }, {
+                        name: 'Verts Lib',
+                        y: 20,
+                        color: color_dict['PVL']
+                    }
+                ]
+            }, {
+                name: '2019',
+                color: '#e52935',
+                center: [600, 100],
+                data: [{
+                        name: 'UDC',
+                        y: 109,
+                        color: color_dict['UDC']
+                    }, {
+                        name: 'PDC',
+                        y: 80,
+                        color: color_dict['PDC']
+                    },
+                    {
+                        name: 'PS',
+                        y: 157,
+                        color: color_dict['PS']
+                    }, {
+                        name: 'PLR',
+                        y: 173,
+                        color: color_dict['PLR']
+                    },
+                    {
+                        name: 'Verts',
+                        y: 121,
+                        color: color_dict['VERTS']
+                    }, {
+                        name: 'Verts Lib',
+                        y: 22,
+                        color: color_dict['PVL']
+                    }
+                ]
+            }]
+        });
 
 
         var gossip = Highcharts.chart('partyGossip', {
@@ -924,7 +1016,7 @@
                 }]
             });
         });
-		        $('#RTS').click(function() {
+        $('#RTS').click(function() {
             topicsByYear.update({
                 title: {
                     text: 'Evolution of the topics over the years in RTS broadcasts'
@@ -956,7 +1048,7 @@
                 }, {
                     name: 'Health',
                     data: [2, 5, 7, 20, 12]
-                },]
+                }, ]
             });
         });
         $('#UDC-1').click(function() {
@@ -1115,7 +1207,6 @@
         $('#ada').click(function() {
             $('#adaImage').show()
         });
-
     </script>
     <script>
         window.twttr = (function(d, s, id) {

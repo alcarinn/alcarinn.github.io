@@ -159,24 +159,8 @@ In order to understand what political topics were being discussed with on RTS an
 These topics along with some of our creation were then used as the basis for our topic analysis below.
 
 
-After running the LDA modeling which gave an idea of the 9 different topics approached by the parties, we decided to design the 14 topics on which we will mainly focus. We drew the list of words corresponding to each topic by hand and were as much exhaustive as possible by filtering words with their roots in order to also include derivatives of these words and hashtags containing those words.
+After running the LDA modeling which gave an idea of the 9 different topics approached by the parties, we decided to design the 14 topics on which we will mainly focus. We drew the list of words corresponding to each topic, searching for keywords in Swiss Politics for each of them, and we made them as much exhaustive as possible by filtering words with their roots in order to also include derivatives of these words and hashtags containing those words.
 
-|    Topic    |                 Word List                 |
-|:-----------:|:-----------------------------------------:|
-|   Climate   |          climat,environnement,co2         |
-| Immigration |      migration,asile,étranger,réfugié     |
-|    Safety   |          sécurité,crime,sûr,sûre          |
-|   Freedom   |               liberté,libre               |
-|   Equality  |             égalité,solidaire             |
-|   Economy   |              économie,marché              |
-|     Work    | travail,emploi,entreprise,chômage,salaire |
-|    Women    |                   femme                   |
-|   Digital   |         numérique,internet,digital        |
-|    Family   |           famille,mariage,enfant          |
-|     AVS     |                    avs                    |
-|    Health   |           santé,maladie,médecin           |
-|    Europe   |                 Europe,UE                 |
-|     Army    |           armée,militaire,gripen          |
 
 
 ## Topics for each party (TODO)
