@@ -163,6 +163,8 @@ progress {
     vertical-align: baseline
 }
 
+
+
 textarea {
     overflow: auto
 }
@@ -13104,6 +13106,13 @@ img {
     stroke: #ffc400
 }
 
+.grid {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
 .color-amber-a700 {
     color: #ffab00
 }
@@ -14670,6 +14679,11 @@ table, td, th {
 
 td, th {
     padding: .5em
+}
+
+topicimg {
+    display:inline-block;
+    width:30%;
 }
 
 figure {

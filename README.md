@@ -151,12 +151,27 @@ The green party uses nearly twice as many emojis than any other party. In fact, 
 ## I see dead topics
 In order to understand which political topics were being discussed on RTS and Twitter, we first conducted <a target="blank" class = "link" href="https://towardsdatascience.com/nlp-extracting-the-main-topics-from-your-dataset-using-lda-in-minutes-21486f5aa925">LDA topic modeling</a> using the RTS subtitles and summaries. It results in a list of topics with an associated set of word for each of them. Below are word cloud representations of selected topics with our title assignments.
 
-<div id="LDAModeling9" align="center">
-    <br>
-		<img src="static/images/LDAModeling9.png" alt="LDAModeling9">
-    <br>
-</div>
+<script>
+function showText(text){
+    document.getElementById("text").innerHTML=text;
+}
+function hide(){
+    document.getElementById("text").innerHTML="";
+}
+</script>
 
+
+<div class="grid">
+  <div><img src = "static/images/LDAModels0.png" onMouseOver="showText('Help')" onMouseOut="hide();" id="text"></div>
+  <div><img src = "static/images/LDAModels1.png"></div>
+  <div><img src = "static/images/LDAModels2.png"></div>
+  <div><img src = "static/images/LDAModels3.png"></div>
+  <div><img src = "static/images/LDAModels4.png"></div>
+  <div><img src = "static/images/LDAModels5.png"></div>
+  <div><img src = "static/images/LDAModels6.png"></div>
+  <div><img src = "static/images/LDAModels7.png"></div>
+  <div><img src = "static/images/LDAModels8.png"></div>
+</div>
 These topics along with some of our creation were then used as the basis for our topic analysis below.
 
 ## Topics for each party
