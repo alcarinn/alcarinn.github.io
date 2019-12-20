@@ -155,7 +155,6 @@ In order to understand what political topics were being discussed with on RTS an
     <br>
 		<img src="static/images/LDAModeling9.png" alt="LDAModeling9">
     <br>
-    <b></b>
 </div>
 
 These topics along with some of our creation were then used as the basis for our topic analysis below.
