@@ -10,6 +10,10 @@ body {
     margin: 0
 }
 
+.link {
+    color: dodgerblue;
+}
+
 .centered {
     display: flex;
     align-items: center;
