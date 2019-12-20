@@ -122,6 +122,7 @@ After this little introduction about Swiss politics, let's see <b>how much the d
 
 
 You can select the party that you wish:
+
 <button id="UDC-1">UDC</button>
 <button id="PS-1">PS</button>
 <button id="PLR-1">PLR</button>
@@ -143,6 +144,9 @@ population gain information about each of the political parties and their views 
 appearing in RTS broadcasts during the 2015 and 2019 election years and overall between 2010 and 2019.
 
 <div id="contributorProportions" style="min-width: 310px; height: 400px; margin: auto"></div>
+
+> **Which party uses more emojis ?**<br>
+The Green Party uses nearly two times more emojis than any other party. In fact, even their name on twitter, Les VERTS suisses 🌻 contains an emoji. Their most used emoji is 🌍.
 
 # 3. Topics to pick
 
