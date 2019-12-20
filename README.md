@@ -10,7 +10,7 @@ parties of the last elections and observe if there is any <b>change in their com
 
 ## The databases
 
-Twitter is became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the
+Twitter became a central medium of communication and is used by most of the politicians to transmit their ideas. The restriction of 280 characters by tweet forces the politicians to be succinct and to compress their ideas to keep only the
 essential, using often the same recurrent keywords. It provides for us a good way to grasp what topics are mainly addressed by each party and politician. Therefore, we analyze <b>163,186 tweets</b> posted by the sixth largest parties (listed below)
 and some of their members (selected by their <a href="https://www.tagesanzeiger.ch/sonntagszeitung/wer-hat-in-bern-am-meisten-einfluss/story/11893481">influence</a> in the parliament). We also use the archives of the Radio Television of Switzerland
 (<b>RTS</b>) to understand what are the principal topics discussed by the politicians over the years using a different medium. Finally, we compare the changes in communications of the parties with the <b>results of the federal</b> elections using the associated datasets.
@@ -118,7 +118,7 @@ To familiarize with political parties of Switzerland, we propose first a small i
 The parties presented above are the sixth largest parties and represent <b>90% of the Swiss population</b>.
 
 ## The first rule of Swiss Politics is: you do not talk about PVL
-After this little introduction about Swiss politics, let's see <b>how much the different parties talk about the others parties</b> on twitter.
+After this little introduction about Swiss politics, let's see <b>how much the different parties talk about the others parties</b> on Twitter.
 
 
 You can select the party that you wish:
@@ -138,7 +138,7 @@ On the mainlines, we observe that parties tend to talk more about more powerful 
 Finally, one strategy in communication catches the eye: <b>don't mention the Green Liberal party (PVL).</b>
 
 ## Who's talking ?
-Aside from the information released by each party through their Twitters, we thought it would be interesting to analyze the appearences of representatives of each party on RTS. RTS is where a large number of the romandie
+Aside from the information released by each party through their Twitter account, we thought it would be interesting to analyze the appearences of representatives of each party on RTS. RTS is where a large number of the romandie
 population gain information about each of the political parties and their views so the representation of each party on these platforms is crucial for them to convey their messages. Below is a comparison between the contributors
 appearing in RTS broadcasts during the 2015 and 2019 election years and overall between 2010 and 2019.
 
@@ -195,7 +195,7 @@ After running the LDA modeling which gave an idea of the number <i>n</i> TODO RE
 
 <div id="topicsByParty" style="min-width: 310px; height: 650px; margin: auto"></div>
 
-TODO add the topics for each party with twitter and rts
+TODO add the topics for each party with Twitter and rts
 
 ## Are politicians really all the same ?
 
@@ -286,7 +286,7 @@ You can select the party that you wish:
 
 <div id="topicsByYear" style="min-width: 310px; height: 650px; margin: auto"></div>
 
-Globally, we observe a lot of changes over the years and three are really significant:
+Globally, we observe a lot of changes over the years and three are significant:
 <ol>
     <li>The topic of the <b>climate</b> has largely <b>gained</b> in importance during the two past years.</li>
     <li>The theme of the <b>immigration</b> has <b>lost</b> in importance over the last legislature.</li>
@@ -298,13 +298,13 @@ and the protection of the environment. The PLR and the PS have respectively <b>i
 about the climate, more than the other green (liberal) party, 36%. Thus the <i>Green Wave</i> has submerged until the twittersphere.
 
 ## Green is the new black
-Studying the tweets and communication of the parties is really interesting but we now want to observe whether this <b>evolution in the communication led to a change into the political landscape</b>.  Has the growing interest in climate on social media had an impact on the results of the 2019 elections ?
+Studying the tweets and communication of the parties is interesting but we now want to observe whether this <b>evolution in the communication led to a change into the political landscape</b>.  Has the growing interest in climate on social media had an impact on the results of the 2019 elections ?
 <div id="electionsEvolution" style="min-width: 310px; height: 400px; margin: auto"></div>
 
 As expected, we observe one main evolution in the results which is... The <i>Green Wave</i>! While most of the parties have decreased their seats in the parliament by one or two seats, both green parties have tripled the number of seats they had. <b>The <i>Green Wave</i> has struck again</b> and this time it is not on the twittersphere but in the Swiss parliament. These results show that the growth of the climate topic is not just a trend on social media but reflect the decisions of the Swiss people to vote for parties which put climate as the number one topic.
 
 # 5. Conclusion
-Through this project, we first observe that the <b>tweets are really well representative of the ideologies of the different parties</b>. The keywords used, the top tweets and the topics addressed really match their beliefs. This is not really surprising, twitter is became a direct way for the politicians to discuss with their followers and happily the politicians seem to be coherent in their beliefs, whatever the channel of information. We also notice that <b>all the parties really increased their communications about the climate</b>. In 2015, the climate was the top topic only for the two green parties and was only approximately 6% of the topics addressed. in 2019, it is the top one topic for four parties and is approximately 34% of the topics addressed, which represents an increasing of factor more than five. Finally, <b>only the green parties increased their representation in the Swiss parliament</b> in 2019. The population preferred to vote for parties who were already talking about climate in 2015. What's about 2023 ?
+Through this project, we first observe that the <b>tweets are representative of the ideologies of the different parties</b>. The keywords used, the top tweets and the topics addressed match their beliefs. Indeed, Twitter became a direct way for the politicians to discuss with their followers and the politicians are mostly coherent in their beliefs, whatever the channel of information. We also notice that <b>all the parties increased their communications about the climate</b>. In 2015, the climate was the top topic only for the two green parties and was only approximately 6% of the topics addressed. In 2019, it is the top one topic for four parties and is approximately 34% of the topics addressed, which corresponds is an increase of five times more the 2015 percentage. Finally, <b>only the green parties increased their representation in the Swiss parliament</b> in 2019. The population preferred to vote for parties who were already talking about climate in 2015. How might this trend evolve over the next 4 years ?
 
 <div id="adaImage" align="center">
     <br>
