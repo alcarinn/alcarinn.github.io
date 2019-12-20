@@ -13112,6 +13112,200 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* quick reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* relevant styles */
+.img__wrap {
+  position: relative;
+  height: 300px;
+  width: 257px;
+}
+
+.img__description-0 {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  left: 0;
+  right: 0;
+  background: #91e8e1;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img__description-1 {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  left: 0;
+  right: 0;
+  background: #90ed7d;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img__description-2 {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  left: 0;
+  right: 0;
+  background: #7cb5ec;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img__description-3 {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  left: 0;
+  right: 0;
+  background: #EBD2CC;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img__description-4 {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  left: 0;
+  right: 0;
+  background: #B58D51;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img__description-5 {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  left: 0;
+  right: 0;
+  background: #2b908f;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img__description-6 {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  left: 0;
+  right: 0;
+  background: #BF5436;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img__description-7 {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  left: 0;
+  right: 0;
+  background: #305DB0;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img__description-8 {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  left: 0;
+  right: 0;
+  background: #f15c80;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img__wrap:hover .img__description-0 {
+  visibility: visible;
+  opacity: 1;
+}
+.img__wrap:hover .img__description-1 {
+  visibility: visible;
+  opacity: 1;
+}
+.img__wrap:hover .img__description-2 {
+  visibility: visible;
+  opacity: 1;
+}
+.img__wrap:hover .img__description-3 {
+  visibility: visible;
+  opacity: 1;
+}
+.img__wrap:hover .img__description-4 {
+  visibility: visible;
+  opacity: 1;
+}
+.img__wrap:hover .img__description-5 {
+  visibility: visible;
+  opacity: 1;
+}
+.img__wrap:hover .img__description-6 {
+  visibility: visible;
+  opacity: 1;
+}
+.img__wrap:hover .img__description-7 {
+  visibility: visible;
+  opacity: 1;
+}
+.img__wrap:hover .img__description-8 {
+  visibility: visible;
+  opacity: 1;
+}
 
 .color-amber-a700 {
     color: #ffab00

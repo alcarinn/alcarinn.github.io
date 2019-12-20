@@ -151,26 +151,17 @@ The green party uses nearly twice as many emojis than any other party. In fact, 
 ## I see dead topics
 In order to understand which political topics were being discussed on RTS and Twitter, we first conducted <a target="blank" class = "link" href="https://towardsdatascience.com/nlp-extracting-the-main-topics-from-your-dataset-using-lda-in-minutes-21486f5aa925">LDA topic modeling</a> using the RTS subtitles and summaries. It results in a list of topics with an associated set of word for each of them. Below are word cloud representations of selected topics with our title assignments.
 
-<script>
-function showText(text){
-    document.getElementById("text").innerHTML=text;
-}
-function hide(){
-    document.getElementById("text").innerHTML="";
-}
-</script>
-
 
 <div class="grid">
-  <div><img src = "static/images/LDAModels0.png" onMouseOver="showText('Help')" onMouseOut="hide();" id="text"></div>
-  <div><img src = "static/images/LDAModels1.png"></div>
-  <div><img src = "static/images/LDAModels2.png"></div>
-  <div><img src = "static/images/LDAModels3.png"></div>
-  <div><img src = "static/images/LDAModels4.png"></div>
-  <div><img src = "static/images/LDAModels5.png"></div>
-  <div><img src = "static/images/LDAModels6.png"></div>
-  <div><img src = "static/images/LDAModels7.png"></div>
-  <div><img src = "static/images/LDAModels8.png"></div>
+  <div class="img__wrap"><img class="img__img" src = "static/images/LDAModels0.png"/><p class="img__description-0">Family</p></div>
+  <div class="img__wrap"><img class="img__img" src = "static/images/LDAModels1.png"/><p class="img__description-1">Climate</p></div>
+  <div class="img__wrap"><img class="img__img" src = "static/images/LDAModels2.png"/><p class="img__description-2">Safety</p></div>
+  <div class="img__wrap"><img class="img__img" src = "static/images/LDAModels3.png"/><p class="img__description-3">Army</p></div>
+  <div class="img__wrap"><img class="img__img" src = "static/images/LDAModels4.png"/><p class="img__description-4">AVS</p></div>
+  <div class="img__wrap"><img class="img__img" src = "static/images/LDAModels5.png"/><p class="img__description-5">Women</p></div>
+  <div class="img__wrap"><img class="img__img" src = "static/images/LDAModels6.png"/><p class="img__description-6">Health</p></div>
+  <div class="img__wrap"><img class="img__img" src = "static/images/LDAModels7.png"/><p class="img__description-7">Europe</p></div>
+  <div class="img__wrap"><img class="img__img" src = "static/images/LDAModels8.png"/><p class="img__description-8">Economy</p></div>
 </div>
 These topics along with some of our creation were then used as the basis for our topic analysis below.
 
