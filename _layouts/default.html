@@ -400,7 +400,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Which topics do parties most talk about ?'
+                text: 'Which topics do parties talk most about ?'
             },
             xAxis: {
                 categories: ['VERTS', 'PS', 'PDC', 'PVL', 'PLR', 'UDC']
@@ -652,7 +652,7 @@
             }],
 
             title: {
-                text: 'Which parties does UDC talk more about ?'
+                text: 'Which parties does UDC talk most about ?'
             },
 
             yAxis: {
@@ -1091,7 +1091,7 @@
                 }],
 
                 title: {
-                    text: 'Which parties does UDC talk more about ?'
+                    text: 'Which parties does UDC talk most about ?'
                 }
             });
         });
@@ -1110,7 +1110,7 @@
                 }],
 
                 title: {
-                    text: 'Which parties does PS talk more about ?'
+                    text: 'Which parties does PS talk most about ?'
                 }
             });
         });
@@ -1130,7 +1130,7 @@
                 }],
 
                 title: {
-                    text: 'Which parties does PLR talk more about ?'
+                    text: 'Which parties does PLR talk most about ?'
                 }
             });
         });
@@ -1150,7 +1150,7 @@
                 }],
 
                 title: {
-                    text: 'Which parties does les VERTS talk more about ?'
+                    text: 'Which parties does les VERTS talk most about ?'
                 }
             });
         });
@@ -1158,7 +1158,7 @@
         $('#PDC-1').click(function() {
             gossip.update({
                 xAxis: {
-                    categories: ['UDC', 'PS', 'PLR', 'VERTS', 'PVL']
+                    categories: ['UDC', 'PS', 'PLR', 'PVL', 'VERTS']
                 },
 
                 series: [{
@@ -1166,11 +1166,11 @@
 
                     type: 'area',
                     color: color_dict['PDC'],
-                    data: [31.185567010309278, 34.27835051546392, 21.649484536082475, 12.371134020618557, 0.5154639175257731]
+                    data: [31.185567010309278, 34.27835051546392, 21.649484536082475, 0.5154639175257731, 12.371134020618557]
                 }],
 
                 title: {
-                    text: 'Which parties does PDC talk more about ?'
+                    text: 'Which parties does PDC talk most about ?'
                 }
             });
         });
@@ -1190,7 +1190,7 @@
                 }],
 
                 title: {
-                    text: 'Which parties does PVL talk more about ?'
+                    text: 'Which parties does PVL talk most about ?'
                 }
             });
         });
